@@ -1,0 +1,40 @@
+[00:00:01.292] Server  LOG     ✓ Ready in 1120ms
+[00:00:19.290] Server  LOG     ✓ Compiled in 270ms
+[00:01:23.607] Server  LOG     ✓ Compiled in 10ms
+[00:01:38.198] Server  LOG     ✓ Compiled in 8ms
+[00:02:16.353] Server  LOG     ✓ Compiled in 5ms
+[00:02:44.604] Server  LOG     ✓ Compiled in 7ms
+[00:03:01.935] Server  LOG     ✓ Compiled in 16ms
+[00:03:25.000] Server  LOG     ✓ Compiled in 5ms
+[00:03:53.043] Server  LOG     ✓ Compiled in 6ms
+[00:04:13.438] Server  LOG     ✓ Compiled in 7ms
+[00:04:20.997] Server  LOG     ✓ Compiled in 6ms
+[00:06:39.618] Server  LOG     ✓ Compiled in 6ms
+[00:07:45.734] Server  LOG     ✓ Compiled in 13ms
+[00:10:33.460] Server  LOG     ✓ Compiled in 9ms
+[00:11:52.039] Server  LOG     ✓ Compiled in 14ms
+[00:12:18.425] Server  LOG     ✓ Compiled in 7ms
+[00:13:19.566] Server  LOG     ✓ Compiled in 7ms
+[00:14:35.505] Server  ERROR   ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:14:36.312] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Home`.
+[00:16:10.499] Server  LOG     ✓ Compiled in 4ms
+[00:16:16.934] Server  LOG     ✓ Compiled in 6ms
+[00:16:26.382] Server  LOG     ✓ Compiled in 8ms
+[00:20:35.508] Server  LOG     ✓ Compiled in 17ms
+[00:24:52.807] Server  LOG     ✓ Compiled in 6ms
+[00:26:18.537] Server  LOG     ✓ Compiled in 6ms
+[00:26:34.035] Server  LOG     ✓ Compiled in 7ms
+[00:27:51.687] Server  LOG     ✓ Compiled in 7ms
+[00:29:47.350] Server  LOG     ✓ Compiled in 5ms
+[00:30:32.065] Server  LOG     ✓ Compiled in 6ms
+[00:30:48.999] Server  LOG     ✓ Compiled in 8ms
+[00:30:57.031] Server  LOG     ✓ Compiled in 7ms
+[00:31:14.545] Server  LOG     ✓ Compiled in 6ms
+[00:31:23.316] Server  LOG     ✓ Compiled in 32ms
+[00:31:33.786] Server  LOG     ✓ Compiled in 7ms
+[00:31:38.550] Server  LOG     ✓ Compiled in 7ms
+[00:32:01.452] Server  LOG     ✓ Compiled in 5ms
+[00:33:02.037] Server  LOG     ✓ Compiled in 5ms
+[00:33:21.768] Server  LOG     ✓ Compiled in 5ms
