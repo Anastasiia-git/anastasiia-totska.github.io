@@ -1,5 +1,5 @@
-import styles from "./Hero.module.css";
 import Image from "next/image";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
@@ -11,21 +11,19 @@ const Hero = () => {
         <p className={styles.description}>
           I build modern web applications using React and Next.js.
         </p>
-
-        <div className={styles.buttons}>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
       </div>
 
       <div className={styles.right}>
-        <Image
-          src="/avatar.png"
-          alt="Anastasiia Totska"
-          width={300}
-          height={300}
-          priority
-        />
+        <div className={styles.avatarWrapper}>
+          <Image
+            src="/avatar.png"
+            alt="Anastasiia Totska"
+            priority
+            className={styles.avatar}
+            width={280}
+            height={280}
+          />
+        </div>
       </div>
     </section>
   );
