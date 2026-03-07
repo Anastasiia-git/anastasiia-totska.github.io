@@ -51,7 +51,7 @@ const metadata = {
         }
     ],
     icons: {
-        icon: "favicon.ico"
+        icon: "/favicon.svg"
     },
     openGraph: {
         title: "Anastasiia Totska | Junior Frontend Developer",
@@ -60,7 +60,7 @@ const metadata = {
         siteName: "Anastasiia Totska Portfolio",
         images: [
             {
-                url: "/favicon.png",
+                url: "/favicon.svg",
                 width: 1200,
                 height: 630
             }
@@ -72,7 +72,7 @@ const metadata = {
         title: "Anastasiia Totska | Junior Frontend Developer",
         description: "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
         images: [
-            "/favicon.png"
+            "/favicon.svg"
         ]
     }
 };

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
   authors: [{ name: "Anastasiia Totska" }],
   icons: {
-    icon: "favicon.ico",
+    icon: "/favicon.svg",
   },
   openGraph: {
     title: "Anastasiia Totska | Junior Frontend Developer",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Anastasiia Totska Portfolio",
     images: [
       {
-        url: "/favicon.png",
+        url: "/favicon.svg",
         width: 1200,
         height: 630,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Anastasiia Totska | Junior Frontend Developer",
     description:
       "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
-    images: ["/favicon.png"],
+    images: ["/favicon.svg"],
   },
 };
 
