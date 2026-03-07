@@ -10,21 +10,19 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  //додати свій домен
-  metadataBase: new URL("https://anastasiia-totska.github.io"),
-  //--------
+  metadataBase: new URL("https://anastasiia-totska-github-io.vercel.app/"),
   title: "Anastasiia Totska | Junior Frontend Developer",
   description:
     "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
   authors: [{ name: "Anastasiia Totska" }],
   icons: {
-    icon: "/favicon.png",
+    icon: "favicon.ico",
   },
   openGraph: {
     title: "Anastasiia Totska | Junior Frontend Developer",
     description:
       "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
-    url: "https://anastasiia-totska.github.io",
+    url: "https://anastasiia-totska-github-io.vercel.app/",
     siteName: "Anastasiia Totska Portfolio",
     images: [
       {

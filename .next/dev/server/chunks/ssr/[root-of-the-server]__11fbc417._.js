@@ -42,9 +42,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$r
 ;
 ;
 const metadata = {
-    //додати свій домен
-    metadataBase: new URL("https://anastasiia-totska.github.io"),
-    //--------
+    metadataBase: new URL("https://anastasiia-totska-github-io.vercel.app/"),
     title: "Anastasiia Totska | Junior Frontend Developer",
     description: "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
     authors: [
@@ -53,12 +51,12 @@ const metadata = {
         }
     ],
     icons: {
-        icon: "/favicon.png"
+        icon: "favicon.ico"
     },
     openGraph: {
         title: "Anastasiia Totska | Junior Frontend Developer",
         description: "Portfolio of Anastasiia Totska - Junior Frontend Developer specializing in React and Next.js.",
-        url: "https://anastasiia-totska.github.io",
+        url: "https://anastasiia-totska-github-io.vercel.app/",
         siteName: "Anastasiia Totska Portfolio",
         images: [
             {
@@ -87,12 +85,12 @@ function RootLayout({ children }) {
             children: children
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 54,
+            lineNumber: 52,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 53,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }
