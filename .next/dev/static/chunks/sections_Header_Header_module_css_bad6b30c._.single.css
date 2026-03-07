@@ -56,8 +56,13 @@
 }
 
 .Header-module__HTl0vW__nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px #3b82f666;
+}
+
+.Header-module__HTl0vW__active {
   color: #fff;
-  background: #ffffff14;
+  background: linear-gradient(90deg, #3b82f640, #6366f140);
 }
 
 @media (min-width: 768px) {

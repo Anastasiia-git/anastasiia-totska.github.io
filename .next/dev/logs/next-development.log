@@ -1,15 +1,17 @@
-[00:00:00.598] Server  LOG     ✓ Ready in 426ms
-[00:03:29.770] Server  LOG     ✓ Compiled in 6ms
-[00:03:40.334] Server  LOG     ✓ Compiled in 12ms
-[00:04:08.784] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
-[00:04:08.784] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
-[00:04:08.784] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:04:08.784] Browser ERROR   Image is missing required "src" property: <img>
-[00:05:17.424] Server  LOG     ✓ Compiled in 6ms
-[00:05:36.678] Server  LOG     ✓ Compiled in 7ms
-[00:05:58.122] Server  LOG     ✓ Compiled in 7ms
-[00:07:03.147] Server  LOG     ✓ Compiled in 8ms
-[00:08:13.417] Server  LOG     ✓ Compiled in 7ms
-[00:10:23.573] Server  LOG     ✓ Compiled in 6ms
-[00:10:58.342] Server  LOG     ✓ Compiled in 6ms
-[00:11:08.386] Server  LOG     ✓ Compiled in 6ms
+[00:00:00.508] Server  LOG     ✓ Ready in 368ms
+[00:04:03.740] Server  LOG     ✓ Compiled in 10ms
+[00:04:38.341] Server  LOG     ✓ Compiled in 9ms
+[00:04:52.452] Server  LOG     ✓ Compiled in 7ms
+[00:05:03.725] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:05:03.725] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:05:03.725] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:05:03.725] Browser ERROR   Image is missing required "src" property: <img>
+[00:06:15.452] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:06:15.452] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:07:59.789] Server  LOG     ✓ Compiled in 7ms
+[00:10:07.213] Server  LOG     ✓ Compiled in 7ms
+[00:10:12.682] Server  LOG     ✓ Compiled in 11ms
+[00:13:19.734] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:13:19.734] Browser ERROR   ReactDOM.preload(): Expected two arguments, a non-empty `href` string and an `options` object with an `as` property valid for a `<link rel="preload" as="..." />` tag.%s  The `href` argument encountered was an empty string.
+[00:13:19.734] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:13:19.734] Browser ERROR   Image is missing required "src" property: <img>

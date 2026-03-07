@@ -62,8 +62,16 @@
   transition: all 0.2s ease;
 }
 .nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+.active {
   color: white;
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.25),
+    rgba(99, 102, 241, 0.25)
+  );
 }
 
 @media (min-width: 768px) {

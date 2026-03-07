@@ -55,6 +55,7 @@ const __TURBOPACK__default__export__ = About;
 "[project]/sections/Header/Header.module.css [app-rsc] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
+  "active": "Header-module__HTl0vW__active",
   "header": "Header-module__HTl0vW__header",
   "logo": "Header-module__HTl0vW__logo",
   "nav": "Header-module__HTl0vW__nav",
@@ -184,6 +185,8 @@ __turbopack_context__.v({
   "avatar": "Hero-module__Q0qQkG__avatar",
   "avatarWrapper": "Hero-module__Q0qQkG__avatarWrapper",
   "description": "Hero-module__Q0qQkG__description",
+  "fadeIn": "Hero-module__Q0qQkG__fadeIn",
+  "fadeInUp": "Hero-module__Q0qQkG__fadeInUp",
   "hero": "Hero-module__Q0qQkG__hero",
   "intro": "Hero-module__Q0qQkG__intro",
   "left": "Hero-module__Q0qQkG__left",
