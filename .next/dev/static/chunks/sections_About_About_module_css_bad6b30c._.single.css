@@ -1,4 +1,130 @@
 /* [project]/sections/About/About.module.css [app-client] (css) */
+.About-module__vXCJoG__about {
+  padding: 80px 20px;
+}
 
+.About-module__vXCJoG__container {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.About-module__vXCJoG__photoWrapper {
+  justify-content: center;
+  display: flex;
+}
+
+.About-module__vXCJoG__photoBorder {
+  background: linear-gradient(135deg, #4f9cff, #8b5cf6);
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  padding: 3px;
+  animation: 6s ease-in-out infinite About-module__vXCJoG__float;
+  position: relative;
+}
+
+@keyframes About-module__vXCJoG__float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.About-module__vXCJoG__photo {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.About-module__vXCJoG__content {
+  text-align: center;
+}
+
+.About-module__vXCJoG__subtitle {
+  letter-spacing: 3px;
+  color: #4f9cff;
+  margin-bottom: 10px;
+}
+
+.About-module__vXCJoG__title {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.About-module__vXCJoG__role {
+  color: #c084fc;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.About-module__vXCJoG__text {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.About-module__vXCJoG__button {
+  color: #fff;
+  background: linear-gradient(135deg, #4f9cff, #8b5cf6);
+  border-radius: 12px;
+  padding: 12px 28px;
+  text-decoration: none;
+  transition: transform .2s;
+  display: inline-block;
+}
+
+.About-module__vXCJoG__button:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .About-module__vXCJoG__container {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .About-module__vXCJoG__content {
+    text-align: left;
+  }
+
+  .About-module__vXCJoG__title {
+    font-size: 40px;
+  }
+
+  .About-module__vXCJoG__photoBorder {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .About-module__vXCJoG__about {
+    padding: 120px 40px;
+  }
+
+  .About-module__vXCJoG__container {
+    gap: 100px;
+  }
+
+  .About-module__vXCJoG__title {
+    font-size: 48px;
+  }
+
+  .About-module__vXCJoG__photoBorder {
+    width: 320px;
+    height: 320px;
+  }
+}
 
 /*# sourceMappingURL=sections_About_About_module_css_bad6b30c._.single.css.map*/

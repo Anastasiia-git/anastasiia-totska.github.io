@@ -4,7 +4,6 @@
   border-top: 1px solid #854f6c33;
   border-bottom: 1px solid #854f6c33;
   flex-direction: column;
-  gap: 20px;
   width: 100%;
   padding: 40px 0;
   display: flex;
@@ -18,7 +17,7 @@
   background: #522b5b4d;
   border: 1px solid #dfb6b21a;
   border-radius: 12px;
-  margin: 0 10px;
+  margin: 10px;
   padding: 12px 24px;
   font-size: 1.1rem;
   font-weight: 600;

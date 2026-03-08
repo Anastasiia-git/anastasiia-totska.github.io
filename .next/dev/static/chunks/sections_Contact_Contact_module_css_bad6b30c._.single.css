@@ -1,4 +1,119 @@
 /* [project]/sections/Contact/Contact.module.css [app-client] (css) */
+.Contact-module__FWfYYa__iconWrapper {
+  color: inherit;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+  text-decoration: none;
+  display: flex;
+}
 
+.Contact-module__FWfYYa__contact {
+  padding: 80px 20px;
+}
+
+.Contact-module__FWfYYa__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Contact-module__FWfYYa__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Contact-module__FWfYYa__subtitle {
+  letter-spacing: 3px;
+  color: #4f9cff;
+}
+
+.Contact-module__FWfYYa__title {
+  margin-top: 10px;
+  font-size: 32px;
+}
+
+.Contact-module__FWfYYa__grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  display: grid;
+}
+
+.Contact-module__FWfYYa__card {
+  text-align: center;
+  background: #ffffff0a;
+  border: 1px solid #ffffff14;
+  border-radius: 16px;
+  padding: 25px;
+  text-decoration: none;
+  transition: transform .3s, border .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.Contact-module__FWfYYa__card:before {
+  content: "";
+  opacity: 0;
+  background: radial-gradient(circle, #508cff4d, #0000 60%);
+  transition: opacity .3s;
+  position: absolute;
+  inset: 0;
+}
+
+.Contact-module__FWfYYa__card:hover:before {
+  opacity: 1;
+}
+
+.Contact-module__FWfYYa__card:hover {
+  border-color: #4f9cff;
+  transform: translateY(-8px);
+}
+
+.Contact-module__FWfYYa__icon {
+  color: #4f9cff;
+  margin-bottom: 12px;
+  transition: transform .3s;
+}
+
+.Contact-module__FWfYYa__card:hover .Contact-module__FWfYYa__icon {
+  transform: scale(1.15);
+}
+
+.Contact-module__FWfYYa__cardTitle {
+  letter-spacing: .5px;
+  color: #fff;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color .3s, transform .3s;
+}
+
+.Contact-module__FWfYYa__card:hover .Contact-module__FWfYYa__cardTitle {
+  color: #4f9cff;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .Contact-module__FWfYYa__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Contact-module__FWfYYa__title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Contact-module__FWfYYa__contact {
+    padding: 120px 40px;
+  }
+
+  .Contact-module__FWfYYa__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .Contact-module__FWfYYa__title {
+    font-size: 48px;
+  }
+}
 
 /*# sourceMappingURL=sections_Contact_Contact_module_css_bad6b30c._.single.css.map*/

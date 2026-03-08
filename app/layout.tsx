@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import CursorLight from "@/components/CursorLight/CursorLight";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -49,7 +50,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {" "}
+        <CursorLight /> {children}
+      </body>
     </html>
   );
 }

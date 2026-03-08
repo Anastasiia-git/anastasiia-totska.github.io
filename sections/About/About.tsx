@@ -1,15 +1,54 @@
-import css from "./About.module.css";
+"use client";
 
-const About = () => {
+import Image from "next/image";
+import { motion } from "framer-motion";
+import styles from "./About.module.css";
+
+export default function About() {
   return (
-    <div className={css.container}>
-      <h2>About Me</h2>
-      <p>
-        I am a passionate developer with experience in creating web
-        applications.
-      </p>
-    </div>
-  );
-};
+    <section id="about" className={styles.about}>
+      <div className={styles.container}>
+        <motion.div
+          className={styles.photoWrapper}
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className={styles.photoBorder}>
+            <Image
+              src="/avatar1.png"
+              alt="Anastasiia Totska"
+              fill
+              className={styles.photo}
+            />
+          </div>
+        </motion.div>
 
-export default About;
+        <motion.div
+          className={styles.content}
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <p className={styles.subtitle}>ABOUT ME</p>
+
+          <h2 className={styles.title}>Anastasiia Totska</h2>
+
+          <p className={styles.role}>Frontend Developer</p>
+
+          <p className={styles.text}>
+            I am a Junior Frontend Developer passionate about creating modern
+            responsive web applications and transforming UI designs into
+            functional interfaces.
+          </p>
+
+          <a href="/cv.pdf" className={styles.button}>
+            Download CV
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

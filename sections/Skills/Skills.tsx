@@ -2,45 +2,9 @@
 
 import dynamic from "next/dynamic";
 import styles from "./Skills.module.css";
+import { line1Items, line2Items } from "./skillsData";
 
-// Динамічний імпорт без SSR
 const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
-
-const line1Items = [
-  "Frontend Developer",
-  "Web Applications",
-  "Clean Code",
-  "Responsive Design",
-  "UI/UX",
-  "Modern Interfaces",
-  "Frontend Developer",
-  "Web Applications",
-  "Clean Code",
-  "Responsive Design",
-  "UI/UX",
-  "Modern Interfaces",
-];
-
-const line2Items = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Tailwind",
-  "Git",
-  "GitHub",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Tailwind",
-  "Git",
-  "GitHub",
-];
 
 export default function Skills() {
   return (
@@ -48,7 +12,7 @@ export default function Skills() {
       <Marquee
         speed={40}
         gradient={true}
-        gradientColor="#190019" /* Колір твоєї палітри */
+        gradientColor="#190019"
         gradientWidth={50}
         pauseOnHover={true}
       >
