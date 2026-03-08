@@ -17,7 +17,6 @@ export default function Hero() {
           Always eager to learn and improve.
         </p>
       </div>
-
       <Skills />
     </section>
   );

@@ -151,9 +151,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/sections/Skills/Skills.module.css [app-client] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
-  "active": "Skills-module__i7PjUG__active",
-  "marquee": "Skills-module__i7PjUG__marquee",
-  "marqueeReverse": "Skills-module__i7PjUG__marqueeReverse",
   "skillBox": "Skills-module__i7PjUG__skillBox",
   "skillsContainer": "Skills-module__i7PjUG__skillsContainer",
 });
@@ -166,16 +163,30 @@ __turbopack_context__.s([
     ()=>Skills
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$fast$2d$marquee$2f$dist$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-fast-marquee/dist/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/sections/Skills/Skills.module.css [app-client] (css module)");
 ;
-var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
+// Динамічний імпорт без SSR
+const Marquee = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.A("[project]/node_modules/react-fast-marquee/dist/index.js [app-client] (ecmascript, next/dynamic entry, async loader)"), {
+    loadableGenerated: {
+        modules: [
+            "[project]/node_modules/react-fast-marquee/dist/index.js [app-client] (ecmascript, next/dynamic entry)"
+        ]
+    },
+    ssr: false
+});
+_c = Marquee;
 const line1Items = [
+    "Frontend Developer",
+    "Web Applications",
+    "Clean Code",
+    "Responsive Design",
+    "UI/UX",
+    "Modern Interfaces",
     "Frontend Developer",
     "Web Applications",
     "Clean Code",
@@ -192,67 +203,71 @@ const line2Items = [
     "CSS",
     "Tailwind",
     "Git",
-    "Framer Motion"
+    "GitHub",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "Git",
+    "GitHub"
 ];
 function Skills() {
-    _s();
-    const [hoveredIndex1, setHoveredIndex1] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [hoveredIndex2, setHoveredIndex2] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].skillsContainer,
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$fast$2d$marquee$2f$dist$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].marquee,
-                gradient: false,
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Marquee, {
                 speed: 40,
+                gradient: true,
+                gradientColor: "#190019",
+                /* Колір твоєї палітри */ gradientWidth: 50,
                 pauseOnHover: true,
                 children: line1Items.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].skillBox} ${hoveredIndex1 === i ? __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ""}`,
-                        onMouseEnter: ()=>setHoveredIndex1(i),
-                        onMouseLeave: ()=>setHoveredIndex1(null),
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].skillBox,
                         children: item
-                    }, i, false, {
+                    }, `line1-${i}`, false, {
                         fileName: "[project]/sections/Skills/Skills.tsx",
-                        lineNumber: 41,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/sections/Skills/Skills.tsx",
-                lineNumber: 34,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$fast$2d$marquee$2f$dist$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].marqueeReverse,
-                gradient: false,
-                speed: 30,
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Marquee, {
+                speed: 35,
                 direction: "right",
+                gradient: true,
+                gradientColor: "#190019",
+                gradientWidth: 50,
                 pauseOnHover: true,
                 children: line2Items.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `${__TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].skillBox} ${hoveredIndex2 === i ? __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].active : ""}`,
-                        onMouseEnter: ()=>setHoveredIndex2(i),
-                        onMouseLeave: ()=>setHoveredIndex2(null),
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].skillBox,
                         children: item
-                    }, i, false, {
+                    }, `line2-${i}`, false, {
                         fileName: "[project]/sections/Skills/Skills.tsx",
-                        lineNumber: 62,
+                        lineNumber: 71,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/sections/Skills/Skills.tsx",
-                lineNumber: 54,
+                lineNumber: 62,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/sections/Skills/Skills.tsx",
-        lineNumber: 33,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
-_s(Skills, "reF5Nix/LuocUAJ4zzcF2h+hMrg=");
-_c = Skills;
-var _c;
-__turbopack_context__.k.register(_c, "Skills");
+_c1 = Skills;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "Marquee");
+__turbopack_context__.k.register(_c1, "Skills");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -278,57 +293,32 @@ __turbopack_context__.s([
     ()=>Hero
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/sections/Skills/Skills.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Hero$2f$Hero$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/sections/Hero/Hero.module.css [app-client] (css module)");
-;
-var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
 function Hero() {
-    _s();
-    const [mousePos, setMousePos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        x: 0,
-        y: 0
-    });
-    const handleMouseMove = (e)=>{
-        const { clientX, clientY } = e;
-        setMousePos({
-            x: clientX,
-            y: clientY
-        });
-    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Hero$2f$Hero$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].hero,
-        onMouseMove: handleMouseMove,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Hero$2f$Hero$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].background
             }, void 0, false, {
                 fileName: "[project]/sections/Hero/Hero.tsx",
-                lineNumber: 17,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Hero$2f$Hero$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].left,
-                style: {
-                    textShadow: `
-            ${-(mousePos.x - window.innerWidth / 2) / 30}px 
-            ${-(mousePos.y - window.innerHeight / 2) / 30}px 
-            20px rgba(133, 79, 108, 0.6),
-            0 0 25px rgba(56, 189, 248, 0.4),
-            0 0 35px rgba(223, 182, 178, 0.3)
-          `
-                },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Hero$2f$Hero$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].intro,
                         children: "Hello, I am"
                     }, void 0, false, {
                         fileName: "[project]/sections/Hero/Hero.tsx",
-                        lineNumber: 31,
+                        lineNumber: 12,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -336,7 +326,7 @@ function Hero() {
                         children: "Anastasiia Totska"
                     }, void 0, false, {
                         fileName: "[project]/sections/Hero/Hero.tsx",
-                        lineNumber: 32,
+                        lineNumber: 13,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -344,7 +334,7 @@ function Hero() {
                         children: "Frontend Developer"
                     }, void 0, false, {
                         fileName: "[project]/sections/Hero/Hero.tsx",
-                        lineNumber: 33,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -352,28 +342,27 @@ function Hero() {
                         children: "Junior Frontend Developer creating modern, responsive web experiences. Always eager to learn and improve."
                     }, void 0, false, {
                         fileName: "[project]/sections/Hero/Hero.tsx",
-                        lineNumber: 34,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/sections/Hero/Hero.tsx",
-                lineNumber: 19,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$sections$2f$Skills$2f$Skills$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/sections/Hero/Hero.tsx",
-                lineNumber: 40,
+                lineNumber: 20,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/sections/Hero/Hero.tsx",
-        lineNumber: 16,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
-_s(Hero, "zdFaPlmOFr87TQPHwnBiQCokJBs=");
 _c = Hero;
 var _c;
 __turbopack_context__.k.register(_c, "Hero");

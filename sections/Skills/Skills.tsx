@@ -1,10 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import Marquee from "react-fast-marquee";
+import dynamic from "next/dynamic";
 import styles from "./Skills.module.css";
 
+// Динамічний імпорт без SSR
+const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
+
 const line1Items = [
+  "Frontend Developer",
+  "Web Applications",
+  "Clean Code",
+  "Responsive Design",
+  "UI/UX",
+  "Modern Interfaces",
   "Frontend Developer",
   "Web Applications",
   "Clean Code",
@@ -22,51 +30,45 @@ const line2Items = [
   "CSS",
   "Tailwind",
   "Git",
-  "Framer Motion",
+  "GitHub",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Tailwind",
+  "Git",
+  "GitHub",
 ];
 
 export default function Skills() {
-  const [hoveredIndex1, setHoveredIndex1] = useState<number | null>(null);
-  const [hoveredIndex2, setHoveredIndex2] = useState<number | null>(null);
-
   return (
     <section className={styles.skillsContainer}>
       <Marquee
-        className={styles.marquee}
-        gradient={false}
         speed={40}
-        pauseOnHover
+        gradient={true}
+        gradientColor="#190019" /* Колір твоєї палітри */
+        gradientWidth={50}
+        pauseOnHover={true}
       >
         {line1Items.map((item, i) => (
-          <div
-            key={i}
-            className={`${styles.skillBox} ${
-              hoveredIndex1 === i ? styles.active : ""
-            }`}
-            onMouseEnter={() => setHoveredIndex1(i)}
-            onMouseLeave={() => setHoveredIndex1(null)}
-          >
+          <div key={`line1-${i}`} className={styles.skillBox}>
             {item}
           </div>
         ))}
       </Marquee>
 
       <Marquee
-        className={styles.marqueeReverse}
-        gradient={false}
-        speed={30}
+        speed={35}
         direction="right"
-        pauseOnHover
+        gradient={true}
+        gradientColor="#190019"
+        gradientWidth={50}
+        pauseOnHover={true}
       >
         {line2Items.map((item, i) => (
-          <div
-            key={i}
-            className={`${styles.skillBox} ${
-              hoveredIndex2 === i ? styles.active : ""
-            }`}
-            onMouseEnter={() => setHoveredIndex2(i)}
-            onMouseLeave={() => setHoveredIndex2(null)}
-          >
+          <div key={`line2-${i}`} className={styles.skillBox}>
             {item}
           </div>
         ))}
