@@ -1,130 +1,108 @@
 /* [project]/sections/Hero/Hero.module.css [app-client] (css) */
 .Hero-module__Q0qQkG__hero {
-  color: #fff;
-  background: radial-gradient(circle at 70% 30%, #2563eb26 0%, #0a0f29 100%);
-  justify-content: space-between;
+  text-align: center;
+  color: #fbe4d8;
+  background-color: #190019;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 0 10%;
+  padding: 0 20px;
+  font-family: Inter, sans-serif;
   display: flex;
   position: relative;
   overflow: hidden;
 }
 
-.Hero-module__Q0qQkG__hero:before {
-  content: "";
-  filter: blur(120px);
-  opacity: .2;
+.Hero-module__Q0qQkG__background {
   z-index: 0;
-  background: #6366f1;
-  width: 400px;
-  height: 400px;
+  filter: brightness(.5) blur(2px);
+  background: url("/bg2.png") center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 0;
+  left: 0;
+  transform: scale(1.05);
+}
+
+.Hero-module__Q0qQkG__hero:hover .Hero-module__Q0qQkG__background {
+  transform: scale(1.1);
+}
+
+.Hero-module__Q0qQkG__hero:after {
+  content: "";
+  z-index: 1;
+  background: linear-gradient(#19001966 0%, #190019e6 100%);
+  position: absolute;
+  inset: 0;
 }
 
 .Hero-module__Q0qQkG__left {
-  z-index: 1;
-  max-width: 600px;
-  animation: .8s ease-out forwards Hero-module__Q0qQkG__fadeInUp;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  max-width: 700px;
+  transition: text-shadow .1s;
+  display: flex;
+  position: relative;
+}
+
+.Hero-module__Q0qQkG__intro, .Hero-module__Q0qQkG__title, .Hero-module__Q0qQkG__role, .Hero-module__Q0qQkG__description {
+  opacity: 0;
+  animation: 1s forwards Hero-module__Q0qQkG__fadeInUp;
 }
 
 .Hero-module__Q0qQkG__intro {
   color: #38bdf8;
-  letter-spacing: 1px;
-  margin-bottom: .5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px #38bdf880;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
+  animation-delay: .2s;
 }
 
 .Hero-module__Q0qQkG__title {
-  background: linear-gradient(to right, #fff, #94a3b8);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  margin-bottom: 1rem;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.1;
+  color: #fbe4d8;
+  text-shadow: 0 5px 25px #854f6cb3;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+  animation-delay: .4s;
 }
 
 .Hero-module__Q0qQkG__role {
-  color: #94a3b8;
-  margin-bottom: 1.5rem;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 400;
+  color: #dfb6b2;
+  text-shadow: 0 0 12px #2b124c99;
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  animation-delay: .6s;
 }
 
 .Hero-module__Q0qQkG__description {
-  color: #cbd5e1;
-  max-width: 450px;
+  color: #fbe4d8;
+  opacity: .9;
+  max-width: 500px;
   font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.Hero-module__Q0qQkG__right {
-  z-index: 1;
-  justify-content: center;
-  animation: 1.2s ease-out forwards Hero-module__Q0qQkG__fadeIn;
-  display: flex;
-}
-
-.Hero-module__Q0qQkG__avatarWrapper {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background: #ffffff0d;
-  border: 1px solid #ffffff1a;
-  border-radius: 50%;
-  padding: 10px;
-  transition: transform .3s;
-  position: relative;
-  box-shadow: 0 20px 50px #00000080, 0 0 30px #2563eb33;
-}
-
-.Hero-module__Q0qQkG__avatarWrapper:hover {
-  border-color: #38bdf866;
-  transform: scale(1.02);
-}
-
-.Hero-module__Q0qQkG__avatar {
-  object-fit: cover;
-  filter: drop-shadow(0 0 10px #2563eb1a);
-  border-radius: 50%;
+  animation-delay: .8s;
 }
 
 @keyframes Hero-module__Q0qQkG__fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(15px);
   }
 
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes Hero-module__Q0qQkG__fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
   .Hero-module__Q0qQkG__hero {
-    text-align: center;
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 40px;
-    padding: 80px 5%;
-  }
-
-  .Hero-module__Q0qQkG__description {
-    margin: 0 auto;
+    padding: 0 60px;
   }
 }
 

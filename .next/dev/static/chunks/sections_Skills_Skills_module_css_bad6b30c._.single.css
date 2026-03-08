@@ -1,0 +1,58 @@
+/* [project]/sections/Skills/Skills.module.css [app-client] (css) */
+.Skills-module__i7PjUG__skillsContainer {
+  background: #19001999;
+  border-top: 1px solid #ffffff1a;
+  border-bottom: 1px solid #ffffff1a;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.Skills-module__i7PjUG__skillBox {
+  color: #fbe4d8;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 8px #dfb6b2cc;
+  cursor: pointer;
+  background: #32144699;
+  border-radius: 16px;
+  margin: 8px;
+  padding: 12px 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform .3s, box-shadow .3s, background .3s, color .3s;
+  display: inline-block;
+}
+
+.Skills-module__i7PjUG__skillBox.Skills-module__i7PjUG__active {
+  color: #fff;
+  background: #5a2878e6;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #dfb6b2, 0 0 35px #854f6cb3;
+}
+
+.Skills-module__i7PjUG__marquee, .Skills-module__i7PjUG__marqueeReverse {
+  font-size: 1.4rem;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .Skills-module__i7PjUG__skillBox {
+    margin-right: 1.5rem;
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Skills-module__i7PjUG__skillBox {
+    margin-right: 1rem;
+    padding: 4px 10px;
+    font-size: .9rem;
+  }
+}
+
+/*# sourceMappingURL=sections_Skills_Skills_module_css_bad6b30c._.single.css.map*/
