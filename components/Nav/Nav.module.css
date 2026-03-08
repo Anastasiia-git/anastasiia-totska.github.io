@@ -30,6 +30,17 @@
   transition: all 0.3s ease;
   cursor: default;
 }
+.active {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 0 10px rgba(223, 182, 178, 0.5),
+    0 0 20px rgba(133, 79, 108, 0.35);
+  color: white;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
 
 .open a {
   opacity: 1;

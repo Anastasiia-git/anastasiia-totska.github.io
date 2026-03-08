@@ -12,13 +12,14 @@ export default function Nav({ open, setOpen }: NavProps) {
   const [active, setActive] = useState("about");
   const navRef = useRef<HTMLDivElement>(null);
 
+  // Відстежуємо скрол для підсвічування секцій
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "skills", "projects"];
+      const sections = ["about", "projects", "contact"];
       sections.forEach((id) => {
         const section = document.getElementById(id);
         if (section) {
-          const top = section.offsetTop - 120;
+          const top = section.offsetTop - 120; // старт підсвічування трохи раніше
           const bottom = top + section.offsetHeight;
           if (window.scrollY >= top && window.scrollY < bottom) {
             setActive(id);
@@ -28,9 +29,11 @@ export default function Nav({ open, setOpen }: NavProps) {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // щоб підсвічування було відразу після завантаження
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Закриваємо меню при кліку поза ним
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -52,19 +55,19 @@ export default function Nav({ open, setOpen }: NavProps) {
   return (
     <nav ref={navRef} className={`${styles.nav} ${open ? styles.open : ""}`}>
       <a
-        className={active === "about" ? styles.active : ""}
+        className={`${active === "about" ? styles.active : ""}`}
         onClick={() => scrollToSection("about")}
       >
         About
       </a>
       <a
-        className={active === "projects" ? styles.active : ""}
+        className={`${active === "projects" ? styles.active : ""}`}
         onClick={() => scrollToSection("projects")}
       >
         Projects
       </a>
       <a
-        className={active === "contact" ? styles.active : ""}
+        className={`${active === "contact" ? styles.active : ""}`}
         onClick={() => scrollToSection("contact")}
       >
         Contact
