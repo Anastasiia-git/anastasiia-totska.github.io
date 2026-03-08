@@ -81,6 +81,8 @@
 .Contact-module__FWfYYa__cardTitle {
   letter-spacing: .5px;
   color: #fff;
+  word-break: break-word;
+  text-align: center;
   margin-bottom: 6px;
   font-size: 18px;
   font-weight: 600;

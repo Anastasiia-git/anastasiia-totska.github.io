@@ -14,7 +14,7 @@ const contacts = [
   {
     icon: Linkedin,
     title: "LinkedIn",
-    link: "https://www.linkedin.com/feed/",
+    link: "https://www.linkedin.com/in/anastasiia-totskaya/",
   },
   {
     icon: Github,
@@ -24,7 +24,7 @@ const contacts = [
   {
     icon: Send,
     title: "Telegram",
-    link: "#",
+    link: "https://t.me/AT_dev1",
   },
 ];
 
