@@ -1,4 +1,125 @@
 /* [project]/sections/Projects/Projects.module.css [app-client] (css) */
+.Projects-module__Suz_gq__projects {
+  padding: 80px 20px;
+}
 
+.Projects-module__Suz_gq__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Projects-module__Suz_gq__heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Projects-module__Suz_gq__heading span {
+  color: #4f9cff;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.Projects-module__Suz_gq__heading h2 {
+  margin-top: 10px;
+  font-size: 32px;
+}
+
+.Projects-module__Suz_gq__grid {
+  grid-template-columns: 1fr;
+  gap: 25px;
+  display: grid;
+}
+
+.Projects-module__Suz_gq__card {
+  cursor: pointer;
+  background: #ffffff0a;
+  border: 1px solid #ffffff14;
+  border-radius: 18px;
+  transition: transform .3s, border .3s;
+  overflow: hidden;
+}
+
+.Projects-module__Suz_gq__card:hover {
+  border-color: #4f9cff;
+}
+
+.Projects-module__Suz_gq__card img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  transition: transform .4s;
+}
+
+.Projects-module__Suz_gq__media {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Projects-module__Suz_gq__media img, .Projects-module__Suz_gq__media video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Projects-module__Suz_gq__media video {
+  opacity: 0;
+}
+
+.Projects-module__Suz_gq__card:hover .Projects-module__Suz_gq__media video {
+  opacity: 1;
+}
+
+.Projects-module__Suz_gq__card:hover .Projects-module__Suz_gq__media img {
+  opacity: 0;
+}
+
+.Projects-module__Suz_gq__card:hover img {
+  transform: scale(1.05);
+}
+
+.Projects-module__Suz_gq__cardContent {
+  padding: 20px;
+}
+
+.Projects-module__Suz_gq__cardContent h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.Projects-module__Suz_gq__cardContent p {
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .Projects-module__Suz_gq__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Projects-module__Suz_gq__heading h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Projects-module__Suz_gq__projects {
+    padding: 120px 40px;
+  }
+
+  .Projects-module__Suz_gq__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .Projects-module__Suz_gq__heading h2 {
+    font-size: 48px;
+  }
+}
 
 /*# sourceMappingURL=sections_Projects_Projects_module_css_bad6b30c._.single.css.map*/

@@ -14,7 +14,7 @@ const contacts = [
   {
     icon: Linkedin,
     title: "LinkedIn",
-    link: "https://www.linkedin.com/in/anastasiia-totskaya/",
+    link: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/",
   },
   {
     icon: Github,
@@ -38,7 +38,8 @@ const container = {
 };
 
 export default function Contact() {
-  const handleCopyEmail = (email: string) => {
+  const handleCopyEmail = (email: string, e: React.MouseEvent) => {
+    e.stopPropagation();
     navigator.clipboard.writeText(email);
     toast.success("Email copied!");
   };
@@ -58,38 +59,35 @@ export default function Contact() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          {contacts.map((itemData, index) => {
-            const Icon = itemData.icon;
+          {contacts.map((item, index) => {
+            const Icon = item.icon;
 
             return (
-              <motion.div key={index} className={styles.card}>
-                {itemData.title === "Email" ? (
-                  <>
-                    <a
-                      href={`mailto:${itemData.link}`}
-                      target="_blank"
-                      className={styles.iconWrapper}
-                    >
-                      <Icon size={28} className={styles.icon} />
-                    </a>
+              <motion.div
+                key={index}
+                className={styles.card}
+                onClick={() => {
+                  if (item.title === "Email") {
+                    window.open(`mailto:${item.link}`);
+                  } else {
+                    window.open(item.link, "_blank");
+                  }
+                }}
+              >
+                <div className={styles.iconWrapper}>
+                  <Icon size={28} className={styles.icon} />
+                  {item.title === "Email" ? (
                     <p
                       className={styles.cardTitle}
                       style={{ cursor: "pointer" }}
-                      onClick={() => handleCopyEmail(itemData.link)}
+                      onClick={(e) => handleCopyEmail(item.link, e)}
                     >
-                      {itemData.link}
+                      {item.link}
                     </p>
-                  </>
-                ) : (
-                  <a
-                    href={itemData.link}
-                    target="_blank"
-                    className={styles.iconWrapper}
-                  >
-                    <Icon size={28} className={styles.icon} />
-                    <p className={styles.cardTitle}>{itemData.title}</p>
-                  </a>
-                )}
+                  ) : (
+                    <p className={styles.cardTitle}>{item.title}</p>
+                  )}
+                </div>
               </motion.div>
             );
           })}

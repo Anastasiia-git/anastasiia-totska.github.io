@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import styles from "./Skills.module.css";
-import { line1Items, line2Items } from "./skillsData";
+import { line1Items, line2Items } from "../../data/skillsData";
 
 const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
 

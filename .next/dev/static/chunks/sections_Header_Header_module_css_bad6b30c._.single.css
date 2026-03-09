@@ -39,8 +39,8 @@
 }
 
 .Header-module__HTl0vW__logo:hover {
-  transform: translateY(-2px)scale(1.05);
-  box-shadow: 0 0 12px #dfb6b2b3, 0 0 30px #854f6c99;
+  filter: drop-shadow(0 0 8px #dfb6b280);
+  transform: translateY(-1px);
 }
 
 .Header-module__HTl0vW__logoText {
@@ -55,6 +55,12 @@
 .Header-module__HTl0vW__tag {
   color: #dfb6b2;
   transition: all .3s;
+  display: inline-block;
+}
+
+.Header-module__HTl0vW__tag.Header-module__HTl0vW__active {
+  text-shadow: 0 0 8px #dfb6b2cc, 0 0 15px #854f6c80;
+  transform: translateY(-1px);
 }
 
 .Header-module__HTl0vW__innerDev {

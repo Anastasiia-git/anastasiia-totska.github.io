@@ -1,36 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Nav.module.css";
 
 interface NavProps {
   open: boolean;
   setOpen: (value: boolean) => void;
+  activeSection: string;
 }
 
-export default function Nav({ open, setOpen }: NavProps) {
-  const [active, setActive] = useState("about");
+export default function Nav({ open, setOpen, activeSection }: NavProps) {
   const navRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "projects", "contact"];
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section) {
-          const top = section.offsetTop - 120;
-          const bottom = top + section.offsetHeight;
-          if (window.scrollY >= top && window.scrollY < bottom) {
-            setActive(id);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -50,26 +30,23 @@ export default function Nav({ open, setOpen }: NavProps) {
     setOpen(false);
   };
 
+  const links = [
+    { id: "about", title: "About" },
+    { id: "projects", title: "Projects" },
+    { id: "contact", title: "Contact" },
+  ];
+
   return (
     <nav ref={navRef} className={`${styles.nav} ${open ? styles.open : ""}`}>
-      <a
-        className={`${active === "about" ? styles.active : ""}`}
-        onClick={() => scrollToSection("about")}
-      >
-        About
-      </a>
-      <a
-        className={`${active === "projects" ? styles.active : ""}`}
-        onClick={() => scrollToSection("projects")}
-      >
-        Projects
-      </a>
-      <a
-        className={`${active === "contact" ? styles.active : ""}`}
-        onClick={() => scrollToSection("contact")}
-      >
-        Contact
-      </a>
+      {links.map((link) => (
+        <a
+          key={link.id}
+          className={activeSection === link.id ? styles.active : ""}
+          onClick={() => scrollToSection(link.id)}
+        >
+          {link.title}
+        </a>
+      ))}
     </nav>
   );
 }

@@ -1,0 +1,138 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 12px;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border-radius: 18px;
+  padding: 28px;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(59, 130, 246, 0.15);
+  color: #e2e8f0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.modalImage {
+  object-fit: cover;
+}
+
+.modal h3 {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.modal p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.75);
+  margin-bottom: 18px;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.tech span {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+
+.close:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    padding: 34px;
+    margin: 30px;
+  }
+  .modal h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    padding: 40px;
+    margin: 40px;
+  }
+  .modal h3 {
+    font-size: 2rem;
+  }
+}

@@ -97,6 +97,7 @@
     color 0.3s ease,
     transform 0.3s ease;
 }
+
 .card:hover .cardTitle {
   color: #4f9cff;
   transform: translateY(-2px);
