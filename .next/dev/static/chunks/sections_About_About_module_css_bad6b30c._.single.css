@@ -88,6 +88,14 @@
   transform: scale(1.05);
 }
 
+.About-module__vXCJoG__btnBox {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  display: flex;
+}
+
 @media (min-width: 768px) {
   .About-module__vXCJoG__container {
     flex-direction: row;
@@ -96,6 +104,10 @@
 
   .About-module__vXCJoG__content {
     text-align: left;
+  }
+
+  .About-module__vXCJoG__btnBox {
+    gap: 30px;
   }
 
   .About-module__vXCJoG__title {

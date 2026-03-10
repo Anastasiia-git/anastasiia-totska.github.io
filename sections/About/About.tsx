@@ -44,9 +44,22 @@ export default function About() {
             functional interfaces.
           </p>
 
-          <a href="/cv.pdf" className={styles.button}>
-            Download CV
-          </a>
+          <div className={styles.btnBox}>
+            <a
+              href="/cv/CV_Anastasiia_Totska_de.pdf"
+              download
+              className={styles.button}
+            >
+              Download CV de
+            </a>
+            <a
+              href="/cv/CV_Anastasiia_Totska_en.pdf"
+              download
+              className={styles.button}
+            >
+              Download CV en
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

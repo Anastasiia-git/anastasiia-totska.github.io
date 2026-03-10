@@ -85,6 +85,14 @@
   transform: scale(1.05);
 }
 
+.btnBox {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
@@ -93,6 +101,9 @@
 
   .content {
     text-align: left;
+  }
+  .btnBox {
+    gap: 30px;
   }
 
   .title {

@@ -1,8 +1,6 @@
-[00:00:01.154] Server  LOG     ✓ Ready in 996ms
-[00:00:04.150] Browser WARN    Image with src "/avatar1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:33.523] Server  LOG     ✓ Compiled in 80ms
-[00:02:52.338] Server  LOG     ✓ Compiled in 4ms
-[00:03:34.152] Server  LOG     ✓ Compiled in 4ms
-[00:04:02.581] Server  LOG     ✓ Compiled in 3ms
-[00:04:21.865] Server  LOG     ✓ Compiled in 199ms
-[00:05:13.494] Browser WARN    Image with src "/avatar1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:00.574] Server  LOG     ✓ Ready in 431ms
+[00:00:04.232] Browser WARN    Image with src "/avatar1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:15.525] Browser WARN    Image with src "/avatar1.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:15.525] Browser WARN    Image with src "/projects/portfolio.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:13.311] Server  LOG     ✓ Compiled in 26ms
