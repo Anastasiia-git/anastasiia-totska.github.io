@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import styles from "./Contact.module.css";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, MessageCircle } from "lucide-react";
 
 const contacts = [
   {
@@ -20,6 +20,11 @@ const contacts = [
     icon: Github,
     title: "GitHub",
     link: "https://github.com/Anastasiia-git",
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp",
+    link: "https://wa.me/491627686705?text=Hello%20Anastasiia",
   },
   {
     icon: Send,
