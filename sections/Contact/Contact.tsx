@@ -26,11 +26,6 @@ const contacts = [
     title: "WhatsApp",
     link: "https://wa.me/491627686705?text=Hello%20Anastasiia",
   },
-  {
-    icon: Send,
-    title: "Telegram",
-    link: "https://t.me/AT_dev1",
-  },
 ];
 
 const container = {
