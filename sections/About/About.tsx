@@ -17,7 +17,7 @@ export default function About() {
         >
           <div className={styles.photoBorder}>
             <Image
-              src="/avatar1.png"
+              src="/avatar1.webp"
               alt="Anastasiia Totska"
               fill
               className={styles.photo}

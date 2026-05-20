@@ -10,13 +10,13 @@ Built with **Next.js, TypeScript and Framer Motion** with smooth animations and 
 📸 Screenshots
 
 🏠 **Home Page**
-![Home](./screenshots/home.png)
+![Home](./screenshots/home.webp)
 
 👩 **About Section**
-![Projects](./screenshots/about.png)
+![Projects](./screenshots/about.webp)
 
 💻 **Projects Section**
-![Projects](./screenshots/projects.png)
+![Projects](./screenshots/projects.webp)
 
 ✨ Highlights
 

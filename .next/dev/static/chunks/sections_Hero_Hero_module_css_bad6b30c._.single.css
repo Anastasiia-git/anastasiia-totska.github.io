@@ -15,7 +15,7 @@
 .Hero-module__Q0qQkG__background {
   z-index: 0;
   filter: brightness(.5) blur(2px);
-  background: url("/bg2.png") center / cover no-repeat;
+  background: url("/bg2.webp") center / cover no-repeat;
   width: 100%;
   height: calc(100% + 100px);
   position: absolute;

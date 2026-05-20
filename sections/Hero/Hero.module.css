@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: calc(100% + 100px);
-  background: url("/bg2.png") center center no-repeat;
+  background: url("/bg2.webp") center center no-repeat;
   background-size: cover;
   z-index: 0;
   filter: brightness(0.5) blur(2px);

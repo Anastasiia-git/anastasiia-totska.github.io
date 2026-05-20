@@ -6,7 +6,7 @@ export const projects: ProjectType[] = [
     title: "Portfolio Website",
     description:
       "Personal portfolio built with Next.js to showcase my projects and skills.",
-    image: "/projects/portfolio.png",
+    image: "/projects/portfolio.webp",
     video: "/videos/portfolio.mp4",
     demo: "https://anastasiia-totska-github-io.vercel.app/",
     tech: ["Next.js", "TypeScript", "Framer Motion", "CSS Modules"],
@@ -18,7 +18,7 @@ export const projects: ProjectType[] = [
     title: "MovieFinder",
     description:
       "Movie search app with Next.js to browse titles, view details, cast, and reviews in a modern, responsive UI.",
-    image: "/projects/movieFinder.png",
+    image: "/projects/movieFinder.webp",
     video: "/videos/movie.mp4",
     demo: "https://movie-finder-ebon-zeta.vercel.app/",
     tech: [
@@ -36,7 +36,7 @@ export const projects: ProjectType[] = [
     title: "Task Manager",
     description:
       "Productivity app for tracking tasks, deadlines, and priorities.",
-    image: "/projects/noteHub.png",
+    image: "/projects/noteHub.webp",
     video: "/videos/noteHub.mp4",
     demo: "https://note-hub-drab.vercel.app/",
     tech: ["Next.js", "TypeScript", "Zustand", "App Router", "CSS Modules"],
