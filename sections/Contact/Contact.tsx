@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import styles from "./Contact.module.css";
-import { Mail, Github, Linkedin, Send, MessageCircle } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 
 const contacts = [
   {
@@ -63,7 +63,8 @@ export default function Contact() {
             const Icon = item.icon;
 
             return (
-              <motion.div
+              <motion.button
+                type="button"
                 key={index}
                 className={styles.card}
                 onClick={() => {
@@ -73,6 +74,11 @@ export default function Contact() {
                     window.open(item.link, "_blank");
                   }
                 }}
+                aria-label={
+                  item.title === "Email"
+                    ? `Send email to ${item.link}`
+                    : `Open ${item.title}`
+                }
               >
                 <div className={styles.iconWrapper}>
                   <Icon size={28} className={styles.icon} />
@@ -88,7 +94,7 @@ export default function Contact() {
                     <p className={styles.cardTitle}>{item.title}</p>
                   )}
                 </div>
-              </motion.div>
+              </motion.button>
             );
           })}
         </motion.div>

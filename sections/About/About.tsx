@@ -20,6 +20,7 @@ export default function About() {
               src="/avatar1.webp"
               alt="Anastasiia Totska"
               fill
+              sizes="(max-width: 767px) 240px, (max-width: 1023px) 280px, 320px"
               className={styles.photo}
             />
           </div>
@@ -36,12 +37,15 @@ export default function About() {
 
           <h2 className={styles.title}>Anastasiia Totska</h2>
 
-          <p className={styles.role}>Frontend Developer</p>
+          <p className={styles.role}>
+            Frontend Developer | Full-Stack Certified
+          </p>
 
           <p className={styles.text}>
-            I am a Junior Frontend Developer passionate about creating modern
-            responsive web applications and transforming UI designs into
-            functional interfaces.
+            I am a frontend-focused Junior Developer with a full-stack
+            development certificate. I enjoy turning UI designs into responsive
+            React interfaces and understanding how the frontend connects with
+            APIs, data, and real user workflows.
           </p>
 
           <div className={styles.btnBox}>

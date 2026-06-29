@@ -41,8 +41,12 @@ export default function Nav({ open, setOpen, activeSection }: NavProps) {
       {links.map((link) => (
         <a
           key={link.id}
+          href={`#${link.id}`}
           className={activeSection === link.id ? styles.active : ""}
-          onClick={() => scrollToSection(link.id)}
+          onClick={(event) => {
+            event.preventDefault();
+            scrollToSection(link.id);
+          }}
         >
           {link.title}
         </a>

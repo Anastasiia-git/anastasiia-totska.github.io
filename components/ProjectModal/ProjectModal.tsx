@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectType } from "@/types/projectType";
 import Image from "next/image";
@@ -11,6 +12,17 @@ interface Props {
 }
 
 export default function ProjectModal({ project, onClose }: Props) {
+  useEffect(() => {
+    if (!project) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [project, onClose]);
+
   if (!project) return null;
 
   return (
@@ -24,6 +36,9 @@ export default function ProjectModal({ project, onClose }: Props) {
       >
         <motion.div
           className={styles.modal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="project-modal-title"
           onClick={(e) => e.stopPropagation()}
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -40,7 +55,7 @@ export default function ProjectModal({ project, onClose }: Props) {
             />
           </div>
 
-          <h3>{project.title}</h3>
+          <h3 id="project-modal-title">{project.title}</h3>
           <p>{project.description}</p>
 
           {(project.tech || []).length > 0 && (
@@ -68,7 +83,11 @@ export default function ProjectModal({ project, onClose }: Props) {
             )}
           </div>
 
-          <button className={styles.close} onClick={onClose}>
+          <button
+            className={styles.close}
+            onClick={onClose}
+            aria-label="Close project details"
+          >
             X
           </button>
         </motion.div>

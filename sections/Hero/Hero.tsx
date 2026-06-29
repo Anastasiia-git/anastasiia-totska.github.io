@@ -13,8 +13,8 @@ export default function Hero() {
         <h1 className={styles.title}>Anastasiia Totska</h1>
         <h2 className={styles.role}>Frontend Developer</h2>
         <p className={styles.description}>
-          Junior Frontend Developer creating modern, responsive web experiences.
-          Always eager to learn and improve.
+          Frontend-focused junior developer with a full-stack development
+          certificate, building responsive React and Next.js interfaces.
         </p>
       </div>
       <Skills />

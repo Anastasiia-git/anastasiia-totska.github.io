@@ -45,8 +45,13 @@ export default function Header() {
   return (
     <>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-        <div className={styles.logo} onClick={scrollToTop}>
-          <Image src="/favicon.svg" alt="AT logo" width={36} height={36} />
+        <button
+          type="button"
+          className={styles.logo}
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <Image src="/favicon.webp" alt="AT logo" width={36} height={36} />
           <span className={styles.logoText}>
             <span
               className={`${styles.tag} ${
@@ -64,7 +69,7 @@ export default function Header() {
               /&gt;
             </span>
           </span>
-        </div>
+        </button>
 
         <Nav open={open} setOpen={setOpen} activeSection={activeSection} />
 

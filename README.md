@@ -5,18 +5,18 @@
 
 A modern, responsive **developer portfolio website** to showcase projects, skills and contact information.
 
-Built with **Next.js, TypeScript and Framer Motion** with smooth animations and interactive project previews.
+Built with **Next.js, TypeScript and Framer Motion** with smooth animations and interactive project previews. The portfolio presents a frontend-focused junior developer profile with a full-stack development certificate.
 
 📸 Screenshots
 
 🏠 **Home Page**
-![Home](./screenshots/home.webp)
+![Home](./screenshots/home.png)
 
 👩 **About Section**
-![Projects](./screenshots/about.webp)
+![About](./screenshots/about.png)
 
 💻 **Projects Section**
-![Projects](./screenshots/projects.webp)
+![Projects](./screenshots/projects.png)
 
 ✨ Highlights
 

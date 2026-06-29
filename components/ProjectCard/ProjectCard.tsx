@@ -25,11 +25,13 @@ export default function ProjectCard({ project, onClick }: Props) {
   };
 
   return (
-    <div
+    <button
+      type="button"
       className={styles.card}
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      aria-label={`Open details for ${project.title}`}
     >
       <div className={styles.media}>
         <Image
@@ -47,6 +49,6 @@ export default function ProjectCard({ project, onClick }: Props) {
         <h3>{project.title}</h3>
         <p>{project.description}</p>
       </div>
-    </div>
+    </button>
   );
 }

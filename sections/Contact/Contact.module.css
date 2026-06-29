@@ -46,6 +46,9 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
   transition:
     transform 0.3s ease,
     border 0.3s ease;
@@ -71,6 +74,11 @@
 .card:hover {
   transform: translateY(-8px);
   border-color: #4f9cff;
+}
+
+.card:focus-visible {
+  outline: 3px solid rgba(147, 197, 253, 0.9);
+  outline-offset: 4px;
 }
 
 .icon {
