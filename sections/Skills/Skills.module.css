@@ -1,5 +1,6 @@
 .skillsContainer {
   width: 100%;
+  max-width: 100vw;
   overflow: hidden;
   background: #190019;
   padding: 40px 0;
@@ -7,6 +8,11 @@
   flex-direction: column;
   border-top: 1px solid rgba(133, 79, 108, 0.2);
   border-bottom: 1px solid rgba(133, 79, 108, 0.2);
+}
+
+.skillsContainer :global(.rfm-marquee-container) {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .skillBox {

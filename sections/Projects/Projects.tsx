@@ -13,6 +13,8 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null,
   );
+  const featuredProject = projects.find((project) => project.featured);
+  const regularProjects = projects.filter((project) => !project.featured);
 
   return (
     <section className={styles.projects} id="projects">
@@ -20,10 +22,24 @@ export default function Projects() {
         <div className={styles.heading}>
           <span>PROJECTS</span>
           <h2>My Projects</h2>
+          <p>
+            Each project shows how I work with real frontend tasks: data,
+            layout, reusable components, states, and deployment.
+          </p>
         </div>
 
+        {featuredProject && (
+          <div className={styles.featuredProject}>
+            <ProjectCard
+              project={featuredProject}
+              featured
+              onClick={() => setSelectedProject(featuredProject)}
+            />
+          </div>
+        )}
+
         <div className={styles.grid}>
-          {projects.map((project, index) => (
+          {regularProjects.map((project, index) => (
             <Tilt key={project.id} tiltMaxAngleX={10} tiltMaxAngleY={10}>
               <motion.div
                 whileHover={{ y: -8 }}

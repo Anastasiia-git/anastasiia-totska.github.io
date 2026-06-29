@@ -15,12 +15,21 @@ export default function ProjectModal({ project, onClose }: Props) {
   useEffect(() => {
     if (!project) return;
 
+    const previousOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [project, onClose]);
 
   if (!project) return null;
@@ -57,6 +66,25 @@ export default function ProjectModal({ project, onClose }: Props) {
 
           <h3 id="project-modal-title">{project.title}</h3>
           <p>{project.description}</p>
+
+          <div className={styles.caseDetails}>
+            <div>
+              <h4>My role</h4>
+              <p>{project.role}</p>
+            </div>
+            <div>
+              <h4>Problem</h4>
+              <p>{project.problem}</p>
+            </div>
+            <div>
+              <h4>Solution</h4>
+              <p>{project.solution}</p>
+            </div>
+            <div>
+              <h4>Result</h4>
+              <p>{project.result}</p>
+            </div>
+          </div>
 
           {(project.tech || []).length > 0 && (
             <div className={styles.tech}>

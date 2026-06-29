@@ -1,135 +1,111 @@
-💼 Developer Portfolio
+# Anastasiia Totska - Junior Frontend Developer Portfolio
 
-🌍 Live Demo
-👉 https://anastasiia-totska-github-io.vercel.app/
+Live demo: https://anastasiia-totska-github-io.vercel.app/
 
-A modern, responsive **developer portfolio website** to showcase projects, skills and contact information.
+This is my personal frontend portfolio built with Next.js and TypeScript. It presents my junior frontend profile, selected projects, CV downloads, and contact links in one responsive page.
 
-Built with **Next.js, TypeScript and Framer Motion** with smooth animations and interactive project previews. The portfolio presents a frontend-focused junior developer profile with a full-stack development certificate.
+## What This Portfolio Shows
 
-📸 Screenshots
+- I can build responsive React and Next.js interfaces.
+- I can work with typed data, reusable components, and clean project structure.
+- I can connect frontend work with real product needs: project previews, contact actions, CV links, and deployed demos.
+- I can keep a project production-ready with TypeScript, ESLint, and Vercel deployment.
 
-🏠 **Home Page**
+## Featured Project
+
+### Task Manager
+
+A task management app for creating, organizing, filtering, and reviewing notes with typed state management.
+
+My role:
+- Built the Next.js app structure and responsive task interface.
+- Used TypeScript and Zustand for predictable client state.
+- Added task cards, filters, detail views, and clean reusable UI.
+
+Why it matters:
+- Shows state management.
+- Shows product thinking.
+- Shows typed frontend architecture.
+- Shows responsive UI implementation.
+
+## Other Projects
+
+### MovieFinder
+
+A movie discovery app connected to the TMDB API.
+
+Key work:
+- Search and movie details.
+- Cast and review data.
+- Loading and error states.
+- Responsive React UI.
+
+### Portfolio Website
+
+This portfolio itself is also a frontend project.
+
+Key work:
+- Next.js App Router setup.
+- Reusable project cards and modal.
+- SEO metadata.
+- Downloadable English and German CVs.
+- Responsive layout and accessible actions.
+
+## Tech Stack
+
+| Technology | Purpose |
+| --- | --- |
+| Next.js | React framework and App Router |
+| TypeScript | Type safety |
+| React | Component-based UI |
+| CSS Modules | Component-level styles |
+| Framer Motion | Simple UI animations |
+| Vercel | Deployment |
+
+## Quality Signals
+
+- ESLint passes.
+- Production build passes.
+- Responsive layout.
+- Accessible buttons and links.
+- Project data is typed.
+- `.next`, OS files, environment files, and logs are ignored.
+
+## Screenshots
+
+### Home
+
 ![Home](./screenshots/home.png)
 
-👩 **About Section**
+### About
+
 ![About](./screenshots/about.png)
 
-💻 **Projects Section**
+### Projects
+
 ![Projects](./screenshots/projects.png)
 
-✨ Highlights
+## Getting Started
 
-✔ Modern responsive design
-✔ Animated project cards
-✔ Video preview on hover
-✔ Interactive project modal
-✔ Smooth animations with Framer Motion
-✔ Clean component architecture
-✔ Mobile-first layout
-✔ Optimized performance with Next.js
-
-🧩 Features
-
-💼 Showcase personal projects
-🎬 Hover preview videos inside project cards
-📂 Detailed project modal with tech stack
-🔗 Direct links to **Live Demo** and **GitHub**
-📱 Fully responsive design for all devices
-🎨 Modern UI with gradient and glass effects
-⚡ Fast page load with optimized assets
-
-#🧠 Project Card Interaction
-
-Each project card includes a dynamic preview system:
-
-Flow:
-
-User hover → video preview starts
-Mouse leave → video stops and resets
-Click → project modal opens with details
-
-This allows quick project exploration without leaving the page.
-
-⚙️ Tech Stack
-
-| Technology    | Purpose           |
-| ------------- | ----------------- |
-| Next.js       | React framework   |
-| TypeScript    | Type safety       |
-| Framer Motion | UI animations     |
-| CSS Modules   | Component styling |
-| React         | UI library        |
-
-🎨 UI Philosophy
-
-This portfolio focuses on modern UI principles:
-
-• Clean minimal design
-• Subtle animations
-• Interactive project previews
-• Clear project presentation
-• Responsive layout
-• Performance-first architecture
-
-📁 Project Structure
-
-```
-src
- ├── app
- │   └── page.tsx
- │
- ├── components
- │   ├── ProjectCard
- │   ├── ProjectModal
- │   └── Contact
- │
- ├── sections
- │   ├── About
- │   ├── Projects
- │   └── Contact
- │
- ├── data
- │   └── projects.ts
- │
- ├── types
- │   └── projectType.ts
-```
-
-🚀 Getting Started
-
-Clone the repository
-git clone https://github.com/Anastasiia-git/anastasiia-totska.github.io.git
-cd portfolio
-Install dependencies
+```bash
 npm install
-Run development server
 npm run dev
-Open in browser
-http://localhost:3000
+```
 
-📦 Deployment
+Open http://localhost:3000 in your browser.
 
-This project can be deployed easily with:
+## Available Scripts
 
-• **Vercel**
-• Netlify
-• Static export hosting
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-🛣 Roadmap
+## Author
 
-🧠 Add project filtering
-🌙 Dark / Light theme switcher
-📊 Project analytics
-📝 Blog section
-📬 Contact form with backend
+Anastasiia Totska
 
-👨‍💻 Author
-
-**Anastasiia Totska**
-
-GitHub → https://github.com/Anastasiia-git
-
-📄 License
-
-Educational project — free to use for learning purposes.
+- GitHub: https://github.com/Anastasiia-git
+- LinkedIn: https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/

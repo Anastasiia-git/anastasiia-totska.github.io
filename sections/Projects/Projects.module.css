@@ -23,6 +23,17 @@
   margin-top: 10px;
 }
 
+.heading p {
+  max-width: 680px;
+  margin: 14px auto 0;
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+
+.featuredProject {
+  margin-bottom: 28px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;

@@ -71,6 +71,83 @@
   margin-bottom: 25px;
 }
 
+.infoBlock {
+  margin-bottom: 24px;
+}
+
+.certificateBlock {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 18px;
+  border: 1px solid rgba(79, 156, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(7, 11, 31, 0.42);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.certificateText h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.certificateText p {
+  margin: 0;
+  color: #bdbdbd;
+  line-height: 1.55;
+}
+
+.certificateLabel {
+  margin-bottom: 8px !important;
+  color: #c084fc !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.certificateImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1498 / 1054;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.certificateImage img {
+  object-fit: cover;
+}
+
+.infoBlock h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.abilityList,
+.qualityList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.abilityList span,
+.qualityList span {
+  padding: 8px 12px;
+  border: 1px solid rgba(79, 156, 255, 0.35);
+  border-radius: 10px;
+  color: #dbeafe;
+  background: rgba(79, 156, 255, 0.08);
+  font-size: 14px;
+}
+
+.qualityList {
+  margin-bottom: 28px;
+}
+
 .button {
   display: inline-block;
   padding: 12px 28px;
@@ -102,6 +179,12 @@
   .content {
     text-align: left;
   }
+
+  .certificateBlock {
+    grid-template-columns: minmax(0, 0.95fr) minmax(240px, 1.25fr);
+    align-items: center;
+  }
+
   .btnBox {
     gap: 30px;
   }

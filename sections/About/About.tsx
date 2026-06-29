@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import styles from "./About.module.css";
+import { abilityItems, qualityItems } from "@/data/profileData";
 
 export default function About() {
   return (
@@ -47,6 +48,50 @@ export default function About() {
             React interfaces and understanding how the frontend connects with
             APIs, data, and real user workflows.
           </p>
+
+          <div className={styles.certificateBlock}>
+            <div className={styles.certificateText}>
+              <p className={styles.certificateLabel}>Certification</p>
+              <h3>Fullstack Developer Course</h3>
+              <p>
+                GoIT, May 2026 · 872 hours · HTML/CSS, JavaScript, React,
+                Next.js, Node.js
+              </p>
+            </div>
+
+            <div className={styles.certificateImage}>
+              <Image
+                src="/certificate.webp"
+                alt="GoIT Fullstack Developer Course certificate"
+                fill
+                sizes="(max-width: 767px) 100vw, 420px"
+              />
+            </div>
+          </div>
+
+          <div className={styles.infoBlock}>
+            <h3>What I can do</h3>
+            <div className={styles.abilityList}>
+              {abilityItems.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.infoBlock}>
+            <h3>Looking for</h3>
+            <p className={styles.text}>
+              A Junior Frontend Developer role where I can build React and
+              Next.js interfaces, work with APIs, write clean TypeScript, and
+              grow in a product-focused team.
+            </p>
+          </div>
+
+          <div className={styles.qualityList}>
+            {qualityItems.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
 
           <div className={styles.btnBox}>
             <a

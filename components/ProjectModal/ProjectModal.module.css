@@ -5,8 +5,10 @@
   backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 24px 12px;
+  align-items: flex-start;
+  padding: 20px 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   z-index: 1000;
 }
 
@@ -14,10 +16,15 @@
   position: relative;
   width: 100%;
   max-width: 850px;
+  max-height: calc(100vh - 40px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   background: linear-gradient(145deg, #0f172a, #020617);
   border-radius: 18px;
-  padding: 28px;
-  margin: 20px;
+  padding: 24px;
+  margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.9),
@@ -50,6 +57,31 @@
   line-height: 1.6;
   color: rgba(226, 232, 240, 0.75);
   margin-bottom: 18px;
+}
+
+.caseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.caseDetails div {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.caseDetails h4 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.caseDetails p {
+  margin: 0;
+  font-size: 14px;
 }
 
 .tech {
@@ -124,9 +156,13 @@
 }
 
 @media (min-width: 768px) {
+  .overlay {
+    padding: 30px;
+  }
+
   .modal {
+    max-height: calc(100vh - 60px);
     padding: 34px;
-    margin: 30px;
   }
   .modal h3 {
     font-size: 1.8rem;
@@ -134,9 +170,14 @@
 }
 
 @media (min-width: 1024px) {
-  .modal {
+  .overlay {
+    align-items: center;
     padding: 40px;
-    margin: 40px;
+  }
+
+  .modal {
+    max-height: calc(100vh - 80px);
+    padding: 40px;
   }
   .modal h3 {
     font-size: 2rem;

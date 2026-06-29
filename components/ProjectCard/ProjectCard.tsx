@@ -8,9 +8,10 @@ import styles from "./ProjectCard.module.css";
 type Props = {
   project: ProjectType;
   onClick: () => void;
+  featured?: boolean;
 };
 
-export default function ProjectCard({ project, onClick }: Props) {
+export default function ProjectCard({ project, onClick, featured = false }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
@@ -27,7 +28,7 @@ export default function ProjectCard({ project, onClick }: Props) {
   return (
     <button
       type="button"
-      className={styles.card}
+      className={`${styles.card} ${featured ? styles.featured : ""}`}
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -46,8 +47,14 @@ export default function ProjectCard({ project, onClick }: Props) {
       </div>
 
       <div className={styles.cardContent}>
+        {featured && <span className={styles.badge}>Featured project</span>}
         <h3>{project.title}</h3>
         <p>{project.description}</p>
+        <div className={styles.highlights}>
+          {project.highlights.slice(0, featured ? 4 : 2).map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
       </div>
     </button>
   );
