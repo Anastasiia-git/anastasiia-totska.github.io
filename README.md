@@ -1,19 +1,35 @@
 # Anastasiia Totska Portfolio
 
-Live demo: https://anastasiia-totska-github-io.vercel.app/
-
 Personal portfolio for a junior frontend developer. The site presents my profile, practical skills, selected projects, downloadable CVs, and contact links in one responsive page.
+
+## Live Demo
+
+[View the deployed app](https://anastasiia-totska-github-io.vercel.app/)
+
+## Preview
+
+### Hero Section
+
+![Portfolio home](screenshots/home.png)
+
+### About Section
+
+![Portfolio about](screenshots/about.png)
+
+### Projects Section
+
+![Portfolio projects](screenshots/projects.png)
 
 ## Stack
 
-| Technology | Purpose |
-| --- | --- |
-| Next.js | App Router, metadata, image optimization |
-| React | Component-based UI |
-| TypeScript | Typed project data and component props |
-| CSS Modules | Scoped, mobile-first styles |
-| Framer Motion | Small section and modal animations |
-| Vercel | Deployment |
+| Technology    | Purpose                                  |
+| ------------- | ---------------------------------------- |
+| Next.js       | App Router, metadata, image optimization |
+| React         | Component-based UI                       |
+| TypeScript    | Typed project data and component props   |
+| CSS Modules   | Scoped, mobile-first styles              |
+| Framer Motion | Small section and modal animations       |
+| Vercel        | Deployment                               |
 
 ## Main Features
 
