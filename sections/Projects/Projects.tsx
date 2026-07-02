@@ -9,12 +9,13 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import ProjectModal from "@/components/ProjectModal/ProjectModal";
 import styles from "./Projects.module.css";
 
+const orderedProjects = [...projects].sort(
+  (a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
+);
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null,
-  );
-  const orderedProjects = [...projects].sort((a, b) =>
-    Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
   );
 
   return (
@@ -24,8 +25,8 @@ export default function Projects() {
           <span>PROJECTS</span>
           <h2>My Projects</h2>
           <p>
-            Each project shows how I work with real frontend tasks: data,
-            layout, reusable components, states, and deployment.
+            Selected work with practical frontend decisions: API flows, typed
+            data, state management, accessibility, and deployed UI.
           </p>
         </div>
 

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Skills from "../Skills/Skills";
 import styles from "./Hero.module.css";
@@ -18,8 +16,8 @@ export default function Hero() {
           </h1>
           <h2 className={styles.role}>Frontend Developer</h2>
           <p className={styles.description}>
-            Frontend-focused junior developer with a full-stack development
-            certificate, building responsive React and Next.js interfaces.
+            Junior frontend developer turning product ideas into polished,
+            accessible React and Next.js experiences.
           </p>
         </div>
 

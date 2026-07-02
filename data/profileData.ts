@@ -1,17 +1,8 @@
 export const abilityItems = [
-  "Build responsive React and Next.js interfaces",
-  "Work with REST APIs and async UI states",
-  "Create typed reusable components with TypeScript",
-  "Handle loading, empty, and error states",
-  "Use Git, GitHub, ESLint, and Vercel deployment",
-  "Translate designs into clean, maintainable UI",
-];
-
-export const qualityItems = [
-  "TypeScript",
-  "ESLint passes",
-  "Production build passes",
-  "Responsive UI",
-  "Vercel deployment",
-  "Accessible actions",
+  "Build React and Next.js screens from structured data",
+  "Connect REST APIs and model async user flows",
+  "Create typed components with clear responsibilities",
+  "Design loading, empty, error, and success states",
+  "Ship projects with Git, GitHub, ESLint, and Vercel",
+  "Turn designs into maintainable, accessible UI",
 ];

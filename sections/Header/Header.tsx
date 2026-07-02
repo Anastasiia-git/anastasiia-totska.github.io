@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
 import styles from "./Header.module.css";
 import Nav from "../../components/Nav/Nav";
+import { useBodyScrollLock } from "../../components/useBodyScrollLock";
 
 const sections = ["home", "about", "projects", "contact"];
 
@@ -19,20 +20,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const previousBodyOverflow = document.body.style.overflow;
-    const previousHtmlOverflow = document.documentElement.style.overflow;
-
-    if (open) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.body.style.overflow = previousBodyOverflow;
-      document.documentElement.style.overflow = previousHtmlOverflow;
-    };
-  }, [open]);
+  useBodyScrollLock(open);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,44 +46,42 @@ export default function Header() {
   };
 
   return (
-    <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-        <button
-          type="button"
-          className={styles.logo}
-          onClick={scrollToTop}
-          aria-label="Scroll to top"
-        >
-          <Image src="/favicon.webp" alt="AT logo" width={36} height={36} />
-          <span className={styles.logoText}>
-            <span
-              className={`${styles.tag} ${
-                activeSection === "home" ? styles.active : ""
-              }`}
-            >
-              &lt;
-            </span>
-            <span className={styles.innerDev}>dev</span>
-            <span
-              className={`${styles.tag} ${
-                activeSection === "home" ? styles.active : ""
-              }`}
-            >
-              /&gt;
-            </span>
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+      <button
+        type="button"
+        className={styles.logo}
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+      >
+        <Image src="/favicon.webp" alt="AT logo" width={36} height={36} />
+        <span className={styles.logoText}>
+          <span
+            className={`${styles.tag} ${
+              activeSection === "home" ? styles.active : ""
+            }`}
+          >
+            &lt;
           </span>
-        </button>
+          <span className={styles.innerDev}>dev</span>
+          <span
+            className={`${styles.tag} ${
+              activeSection === "home" ? styles.active : ""
+            }`}
+          >
+            /&gt;
+          </span>
+        </span>
+      </button>
 
-        <Nav open={open} setOpen={setOpen} activeSection={activeSection} />
+      <Nav open={open} setOpen={setOpen} activeSection={activeSection} />
 
-        <div className={styles.burger}>
-          <Hamburger toggled={open} toggle={setOpen} size={22} />
-        </div>
+      <div className={styles.burger}>
+        <Hamburger toggled={open} toggle={setOpen} size={22} />
+      </div>
 
-        {open && (
-          <div className={styles.overlay} onClick={() => setOpen(false)} />
-        )}
-      </header>
-    </>
+      {open && (
+        <div className={styles.overlay} onClick={() => setOpen(false)} />
+      )}
+    </header>
   );
 }

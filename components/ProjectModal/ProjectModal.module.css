@@ -38,6 +38,7 @@
   aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
+  margin-top: 34px;
   margin-bottom: 18px;
 }
 
@@ -132,15 +133,16 @@
 
 .close {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 18px;
+  right: 18px;
   border: none;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   color: #f1f5f9;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1;
   cursor: pointer;
   transition:
     background 0.25s,
@@ -167,6 +169,16 @@
     max-height: calc(100vh - 60px);
     padding: 34px;
   }
+
+  .imageWrapper {
+    margin-top: 38px;
+  }
+
+  .close {
+    top: 22px;
+    right: 22px;
+  }
+
   .modal h3 {
     font-size: 29px;
     line-height: 36px;
@@ -183,6 +195,16 @@
     max-height: calc(100vh - 80px);
     padding: 40px;
   }
+
+  .imageWrapper {
+    margin-top: 44px;
+  }
+
+  .close {
+    top: 24px;
+    right: 24px;
+  }
+
   .modal h3 {
     font-size: 32px;
     line-height: 40px;

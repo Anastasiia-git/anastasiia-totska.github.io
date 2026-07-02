@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   Layers,
   Target,
@@ -32,18 +32,50 @@ const facts = [
   },
 ];
 
+const layoutVariants: Variants = {
+  hidden: { opacity: 0, y: 34 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      ease: "easeOut",
+      staggerChildren: 0.1,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const sectionItemVariants: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: "easeOut" },
+  },
+};
+
+const factVariants: Variants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
+};
+
 export default function About() {
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
         <motion.div
           className={styles.layout}
-          initial={{ opacity: 0, y: 36 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          initial="hidden"
+          whileInView="visible"
+          variants={layoutVariants}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className={styles.main}>
+          <motion.div className={styles.main} variants={sectionItemVariants}>
             <p className={styles.subtitle}>ABOUT ME</p>
 
             <h2 className={styles.title}>
@@ -55,25 +87,31 @@ export default function About() {
             </p>
 
             <p className={styles.lead}>
-              I build responsive UI with React, Next.js and TypeScript, connect
-              REST APIs, handle UI states and prepare projects for deployment.
+              I care about interfaces that feel clear to use and simple to
+              maintain: typed components, thoughtful states, API integration,
+              and production-ready delivery.
             </p>
 
-            <div className={styles.facts}>
+            <motion.div className={styles.facts} variants={sectionItemVariants}>
               {facts.map(({ icon: Icon, label, value }) => (
-                <div className={styles.factItem} key={label}>
+                <motion.div
+                  className={styles.factItem}
+                  key={label}
+                  variants={factVariants}
+                >
                   <Icon aria-hidden="true" size={34} strokeWidth={1.8} />
                   <div>
                     <span>{label}</span>
                     <strong>{value}</strong>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <motion.aside
             className={styles.certificateCard}
+            variants={sectionItemVariants}
             whileHover={{ y: -6, rotateX: 1.5, rotateY: -1.5 }}
             transition={{ type: "spring", stiffness: 220, damping: 18 }}
           >
@@ -99,7 +137,7 @@ export default function About() {
             </div>
           </motion.aside>
 
-          <div className={styles.skillsCard}>
+          <motion.div className={styles.skillsCard} variants={sectionItemVariants}>
             <div className={styles.sectionTitle}>
               <Puzzle aria-hidden="true" size={28} strokeWidth={1.8} />
               <h3>Practical skills</h3>
@@ -113,9 +151,9 @@ export default function About() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.goalCard}>
+          <motion.div className={styles.goalCard} variants={sectionItemVariants}>
             <div className={styles.goalIcon}>
               <Target aria-hidden="true" size={34} strokeWidth={1.8} />
             </div>
@@ -124,8 +162,8 @@ export default function About() {
               <h3>Current goal</h3>
               <p className={styles.text}>
                 I am looking for a junior frontend role where I can contribute
-                to real product features, write maintainable code and learn from
-                an experienced team.
+                to product features, improve with code review, and grow inside
+                an experienced engineering team.
               </p>
             </div>
 
@@ -148,7 +186,7 @@ export default function About() {
                 Download CV EN
               </a>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -11,9 +11,7 @@ export default function Skills() {
     <section className={styles.skillsContainer}>
       <Marquee
         speed={40}
-        gradient={true}
-        gradientColor="#190019"
-        gradientWidth={50}
+        gradient={false}
         pauseOnHover={true}
       >
         {line1Items.map((item, i) => (
@@ -26,14 +24,18 @@ export default function Skills() {
       <Marquee
         speed={35}
         direction="right"
-        gradient={true}
-        gradientColor="#190019"
-        gradientWidth={50}
+        gradient={false}
         pauseOnHover={true}
       >
         {line2Items.map((item, i) => (
           <div key={`line2-${i}`} className={styles.skillBox}>
-            <i className={`${item.icon} ${styles.skillIcon}`} aria-hidden />
+            {item.icon ? (
+              <i className={`${item.icon} ${styles.skillIcon}`} aria-hidden />
+            ) : (
+              <span className={styles.fallbackIcon} aria-hidden>
+                {item.fallbackIcon}
+              </span>
+            )}
             <span>{item.name}</span>
           </div>
         ))}

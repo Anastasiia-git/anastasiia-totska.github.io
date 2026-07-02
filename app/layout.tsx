@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import CursorLight from "@/components/CursorLight/CursorLight";
+import ScrollBackground from "@/components/ScrollBackground/ScrollBackground";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://anastasiia-totska-github-io.vercel.app/"),
   title: "Anastasiia Totska | Junior Frontend Developer",
   description:
-    "Portfolio of Anastasiia Totska - frontend-focused junior developer with a full-stack development certificate, specializing in React and Next.js.",
+    "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
   authors: [{ name: "Anastasiia Totska" }],
   icons: {
     icon: "/favicon.webp",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anastasiia Totska | Junior Frontend Developer",
     description:
-      "Portfolio of Anastasiia Totska - frontend-focused junior developer with a full-stack development certificate, specializing in React and Next.js.",
+      "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
     url: "https://anastasiia-totska-github-io.vercel.app/",
     siteName: "Anastasiia Totska Portfolio",
     images: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anastasiia Totska | Junior Frontend Developer",
     description:
-      "Portfolio of Anastasiia Totska - frontend-focused junior developer with a full-stack development certificate, specializing in React and Next.js.",
+      "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
     images: ["/favicon.webp"],
   },
 };
@@ -57,6 +58,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <ScrollBackground />
         <CursorLight /> {children}
       </body>
     </html>

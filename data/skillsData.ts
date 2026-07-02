@@ -18,9 +18,15 @@ export const line1Items = [
   "Full-Stack Fundamentals",
 ];
 
+export type SkillItem = {
+  name: string;
+  icon?: string;
+  fallbackIcon?: string;
+};
+
 const skills = [
   { name: "React", icon: "devicon-react-original colored" },
-  { name: "Next.js", icon: "devicon-nextjs-original" },
+  { name: "Next.js", fallbackIcon: "N" },
   { name: "TypeScript", icon: "devicon-typescript-plain colored" },
   { name: "JavaScript", icon: "devicon-javascript-plain colored" },
   { name: "HTML5", icon: "devicon-html5-plain colored" },
@@ -29,6 +35,6 @@ const skills = [
   { name: "Git", icon: "devicon-git-plain colored" },
   { name: "GitHub", icon: "devicon-github-original" },
   { name: "Node.js Basics", icon: "devicon-nodejs-plain colored" },
-];
+] satisfies SkillItem[];
 
 export const line2Items = [...skills, ...skills];

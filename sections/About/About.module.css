@@ -1,10 +1,6 @@
 .about {
   scroll-margin-top: 82px;
-  padding: 54px 16px;
-  background:
-    radial-gradient(circle at 12% 10%, rgba(76, 141, 255, 0.12), transparent 30%),
-    radial-gradient(circle at 84% 72%, rgba(87, 119, 255, 0.1), transparent 34%),
-    linear-gradient(135deg, #020817 0%, #06122f 48%, #080b22 100%);
+  padding: var(--section-padding-y) var(--section-padding-x);
 }
 
 .container {
@@ -16,15 +12,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 22px;
-  padding: 24px;
-  border: 1px solid rgba(75, 136, 255, 0.22);
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 80% 8%, rgba(73, 133, 255, 0.16), transparent 32%),
-    linear-gradient(145deg, rgba(2, 12, 35, 0.86), rgba(3, 9, 26, 0.94));
-  box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.3),
-    inset 0 0 30px rgba(68, 130, 255, 0.05);
 }
 
 .main {
@@ -339,14 +326,9 @@
 }
 
 @media (min-width: 768px) {
-  .about {
-    padding: 64px 24px;
-  }
-
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
     gap: 28px;
-    padding: 32px;
   }
 
   .main {
@@ -382,14 +364,9 @@
 }
 
 @media (min-width: 1024px) {
-  .about {
-    padding: 76px 32px;
-  }
-
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(380px, 470px);
     gap: 42px 44px;
-    padding: 38px;
   }
 
   .title {

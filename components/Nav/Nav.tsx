@@ -1,7 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import styles from "./Nav.module.css";
+
+const links = [
+  { id: "home", title: "Home" },
+  { id: "about", title: "About" },
+  { id: "projects", title: "Projects" },
+  { id: "contact", title: "Contact" },
+];
+
+const menuCloseDelay = 80;
 
 interface NavProps {
   open: boolean;
@@ -10,34 +18,20 @@ interface NavProps {
 }
 
 export default function Nav({ open, setOpen, activeSection }: NavProps) {
-  const navRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [setOpen]);
-
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+
     setOpen(false);
+
+    if (section) {
+      window.setTimeout(() => {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, menuCloseDelay);
+    }
   };
 
-  const links = [
-    { id: "about", title: "About" },
-    { id: "projects", title: "Projects" },
-    { id: "contact", title: "Contact" },
-  ];
-
   return (
-    <nav ref={navRef} className={`${styles.nav} ${open ? styles.open : ""}`}>
+    <nav className={`${styles.nav} ${open ? styles.open : ""}`}>
       {links.map((link) => (
         <a
           key={link.id}

@@ -1,8 +1,5 @@
 .projects {
-  padding: 54px 16px;
-  background:
-    radial-gradient(circle at 14% 12%, rgba(76, 141, 255, 0.12), transparent 30%),
-    linear-gradient(135deg, #020817 0%, #06122f 52%, #070a1d 100%);
+  padding: var(--section-padding-y) var(--section-padding-x);
 }
 
 .container {
@@ -48,10 +45,6 @@
 }
 
 @media (min-width: 768px) {
-  .projects {
-    padding: 64px 24px;
-  }
-
   .heading {
     margin-bottom: 38px;
   }
@@ -77,10 +70,6 @@
 }
 
 @media (min-width: 1024px) {
-  .projects {
-    padding: 76px 32px;
-  }
-
   .heading h2 {
     font-size: 46px;
     line-height: 52px;

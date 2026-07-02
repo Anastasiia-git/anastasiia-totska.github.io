@@ -17,7 +17,10 @@ export default function CursorLight() {
 
     window.addEventListener("mousemove", move);
 
-    return () => window.removeEventListener("mousemove", move);
+    return () => {
+      window.removeEventListener("mousemove", move);
+      light.remove();
+    };
   }, []);
 
   return null;

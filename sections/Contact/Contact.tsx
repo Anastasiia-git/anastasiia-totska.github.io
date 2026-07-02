@@ -1,106 +1,65 @@
-"use client";
-
-import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
 import styles from "./Contact.module.css";
 import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 
 const contacts = [
   {
     icon: Mail,
-    title: "Email",
-    link: "nastya.totskaya1997@gmail.com",
+    label: "Email",
+    href: "mailto:nastya.totskaya1997@gmail.com",
+    ariaLabel: "Send email to nastya.totskaya1997@gmail.com",
   },
   {
     icon: Linkedin,
-    title: "LinkedIn",
-    link: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/",
+    ariaLabel: "Open LinkedIn",
   },
   {
     icon: Github,
-    title: "GitHub",
-    link: "https://github.com/Anastasiia-git",
+    label: "GitHub",
+    href: "https://github.com/Anastasiia-git",
+    ariaLabel: "Open GitHub",
   },
   {
     icon: MessageCircle,
-    title: "WhatsApp",
-    link: "https://wa.me/491627686705?text=Hello%20Anastasiia",
+    label: "WhatsApp",
+    href: "https://wa.me/491627686705?text=Hello%20Anastasiia",
+    ariaLabel: "Open WhatsApp",
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
 export default function Contact() {
-  const handleCopyEmail = (email: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    navigator.clipboard.writeText(email);
-    toast.success("Email copied!");
-  };
-
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.header}>
           <p className={styles.subtitle}>CONTACT</p>
-          <h2 className={styles.title}>Get In Touch</h2>
+          <h2 className={styles.title}>Get in touch</h2>
         </div>
 
-        <motion.div
-          className={styles.grid}
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          {contacts.map((item, index) => {
+        <div className={styles.grid}>
+          {contacts.map((item) => {
             const Icon = item.icon;
+            const isExternal = item.href.startsWith("http");
 
             return (
-              <motion.button
-                type="button"
-                key={index}
+              <a
+                key={item.label}
+                href={item.href}
                 className={styles.card}
-                onClick={() => {
-                  if (item.title === "Email") {
-                    window.open(`mailto:${item.link}`);
-                  } else {
-                    window.open(item.link, "_blank");
-                  }
-                }}
-                aria-label={
-                  item.title === "Email"
-                    ? `Send email to ${item.link}`
-                    : `Open ${item.title}`
-                }
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                aria-label={item.ariaLabel}
               >
                 <div className={styles.iconWrapper}>
                   <Icon size={28} className={styles.icon} />
-                  {item.title === "Email" ? (
-                    <p
-                      className={styles.cardTitle}
-                      style={{ cursor: "pointer" }}
-                      onClick={(e) => handleCopyEmail(item.link, e)}
-                    >
-                      {item.link}
-                    </p>
-                  ) : (
-                    <p className={styles.cardTitle}>{item.title}</p>
-                  )}
+                  <p className={styles.cardTitle}>{item.label}</p>
                 </div>
-              </motion.button>
+              </a>
             );
           })}
-        </motion.div>
+        </div>
       </div>
-
-      <Toaster position="bottom-center" reverseOrder={false} />
     </section>
   );
 }

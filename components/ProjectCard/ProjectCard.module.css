@@ -10,9 +10,11 @@
   background:
     radial-gradient(circle at 92% 4%, rgba(93, 151, 255, 0.18), transparent 34%),
     linear-gradient(145deg, rgba(3, 16, 45, 0.94), rgba(2, 8, 24, 0.98));
+  padding: 0;
   color: inherit;
   font: inherit;
   text-align: left;
+  appearance: none;
   cursor: pointer;
   box-shadow:
     0 20px 54px rgba(0, 0, 0, 0.32),
