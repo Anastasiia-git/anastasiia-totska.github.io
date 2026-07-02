@@ -1,219 +1,421 @@
 .about {
-  padding: 80px 20px;
+  scroll-margin-top: 82px;
+  padding: 54px 16px;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(76, 141, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 84% 72%, rgba(87, 119, 255, 0.1), transparent 34%),
+    linear-gradient(135deg, #020817 0%, #06122f 48%, #080b22 100%);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: center;
 }
 
-.photoWrapper {
-  display: flex;
-  justify-content: center;
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  padding: 24px;
+  border: 1px solid rgba(75, 136, 255, 0.22);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(73, 133, 255, 0.16), transparent 32%),
+    linear-gradient(145deg, rgba(2, 12, 35, 0.86), rgba(3, 9, 26, 0.94));
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(68, 130, 255, 0.05);
 }
 
-.photoBorder {
-  width: 240px;
-  height: 240px;
-  position: relative;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, #4f9cff, #8b5cf6);
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.photo {
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.content {
-  text-align: center;
+.main {
+  min-width: 0;
 }
 
 .subtitle {
-  letter-spacing: 3px;
-  color: #4f9cff;
-  margin-bottom: 10px;
+  margin: 0 0 18px;
+  color: #5c95ff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  max-width: 760px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 850;
+  line-height: 40px;
 }
 
 .role {
-  color: #c084fc;
-  font-size: 18px;
-  margin-bottom: 20px;
+  margin: 20px 0 0;
+  color: #cbd8f3;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.role strong {
+  color: #ffd6cc;
+  font-weight: 800;
+}
+
+.lead {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: rgba(232, 240, 255, 0.78);
+  font-size: 16px;
+  line-height: 28px;
 }
 
 .text {
-  color: #bdbdbd;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.infoBlock {
-  margin-bottom: 24px;
-}
-
-.certificateBlock {
-  display: grid;
-  gap: 16px;
-  margin-bottom: 28px;
-  padding: 18px;
-  border: 1px solid rgba(79, 156, 255, 0.28);
-  border-radius: 12px;
-  background: rgba(7, 11, 31, 0.42);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
-}
-
-.certificateText h3 {
-  margin: 0 0 8px;
-  color: #ffffff;
-  font-size: 20px;
-}
-
-.certificateText p {
   margin: 0;
-  color: #bdbdbd;
-  line-height: 1.55;
+  color: rgba(232, 240, 255, 0.76);
+  font-size: 15px;
+  line-height: 26px;
 }
 
-.certificateLabel {
-  margin-bottom: 8px !important;
-  color: #c084fc !important;
-  font-size: 13px;
-  font-weight: 700;
+.facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.factItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 82px;
+  padding: 16px;
+  border: 1px solid rgba(75, 136, 255, 0.28);
+  border-radius: 14px;
+  background: rgba(3, 17, 47, 0.68);
+  box-shadow: inset 0 0 22px rgba(255, 255, 255, 0.02);
+}
+
+.factItem svg,
+.sectionTitle svg,
+.goalIcon svg,
+.certificateLabel svg {
+  flex: 0 0 auto;
+  color: #4b88ff;
+}
+
+.factItem span {
+  display: block;
+  margin-bottom: 6px;
+  color: #6fa0ff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.certificateImage {
+.factItem strong {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.certificateCard {
   position: relative;
   overflow: hidden;
+  padding: 22px;
+  border: 1px solid rgba(75, 136, 255, 0.34);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 86% 0%, rgba(75, 136, 255, 0.26), transparent 36%),
+    linear-gradient(145deg, rgba(5, 24, 64, 0.92), rgba(3, 10, 28, 0.96));
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.32),
+    inset 0 0 28px rgba(75, 136, 255, 0.08);
+  transform-style: preserve-3d;
+}
+
+.certificateCard::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -110px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(91, 146, 255, 0.3), transparent 62%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.certificateText {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+}
+
+.certificateLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  color: #6fa0ff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.certificateText h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+.certificateText p {
+  margin: 0;
+  color: rgba(232, 240, 255, 0.72);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.certificateText p + p {
+  margin-top: 4px;
+}
+
+.certificateImage {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  aspect-ratio: 1498 / 1054;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
+  aspect-ratio: 1498 / 1050;
+  overflow: hidden;
+  border: 1px solid rgba(232, 240, 255, 0.14);
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
 }
 
 .certificateImage img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.infoBlock h3 {
-  margin: 0 0 12px;
-  font-size: 20px;
-  color: #ffffff;
+.skillsCard,
+.goalCard {
+  padding: 22px;
+  border: 1px solid rgba(75, 136, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(3, 15, 43, 0.64);
+  box-shadow: inset 0 0 28px rgba(75, 136, 255, 0.04);
 }
 
-.abilityList,
-.qualityList {
+.sectionTitle {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
-.abilityList span,
-.qualityList span {
-  padding: 8px 12px;
-  border: 1px solid rgba(79, 156, 255, 0.35);
+.sectionTitle h3,
+.goalText h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+.abilityList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.abilityList span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1px solid rgba(75, 136, 255, 0.24);
   border-radius: 10px;
-  color: #dbeafe;
-  background: rgba(79, 156, 255, 0.08);
+  background: rgba(6, 28, 74, 0.62);
+  color: #ffffff;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
 }
 
-.qualityList {
-  margin-bottom: 28px;
+.abilityList svg {
+  flex: 0 0 auto;
+  color: #4b88ff;
 }
 
-.button {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #4f9cff, #8b5cf6);
-  color: white;
-  text-decoration: none;
-  transition: transform 0.2s ease;
+.goalCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
 }
 
-.button:hover {
-  transform: scale(1.05);
+.goalIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(75, 136, 255, 0.42);
+  border-radius: 50%;
+  background: rgba(1, 9, 28, 0.72);
+  box-shadow: 0 0 28px rgba(75, 136, 255, 0.18);
+}
+
+.goalText {
+  min-width: 0;
+}
+
+.goalText h3 {
+  margin-bottom: 8px;
 }
 
 .btnBox {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.button,
+.buttonSecondary {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 18px;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.button {
+  border: 1px solid rgba(91, 146, 255, 0.72);
+  background: linear-gradient(135deg, #61a6ff, #3f63ff);
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(63, 99, 255, 0.3);
+}
+
+.buttonSecondary {
+  border: 1px solid rgba(91, 146, 255, 0.58);
+  background: rgba(4, 14, 38, 0.62);
+  color: #ffffff;
+}
+
+.button:hover,
+.buttonSecondary:hover {
+  transform: translateY(-2px);
+}
+
+.buttonSecondary:hover {
+  background: rgba(7, 24, 65, 0.86);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.button:focus-visible,
+.buttonSecondary:focus-visible {
+  outline: 3px solid rgba(91, 146, 255, 0.72);
+  outline-offset: 4px;
 }
 
 @media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    gap: 60px;
+  .about {
+    padding: 64px 24px;
   }
 
-  .content {
-    text-align: left;
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+    gap: 28px;
+    padding: 32px;
   }
 
-  .certificateBlock {
-    grid-template-columns: minmax(0, 0.95fr) minmax(240px, 1.25fr);
-    align-items: center;
-  }
-
-  .btnBox {
-    gap: 30px;
+  .main {
+    max-width: none;
   }
 
   .title {
-    font-size: 40px;
+    font-size: 48px;
+    line-height: 56px;
   }
 
-  .photoBorder {
-    width: 280px;
-    height: 280px;
+  .facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skillsCard,
+  .goalCard {
+    grid-column: 1 / -1;
+  }
+
+  .abilityList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .goalCard {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .btnBox {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .about {
-    padding: 120px 40px;
+    padding: 76px 32px;
   }
 
-  .container {
-    gap: 100px;
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 470px);
+    gap: 42px 44px;
+    padding: 38px;
   }
 
   .title {
-    font-size: 48px;
+    font-size: 58px;
+    line-height: 66px;
   }
 
-  .photoBorder {
-    width: 320px;
-    height: 320px;
+  .lead {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .abilityList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .goalCard {
+    grid-template-columns: 80px minmax(0, 1fr) minmax(300px, 470px);
+  }
+
+  .goalIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btnBox {
+    grid-column: auto;
   }
 }

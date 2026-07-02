@@ -1,16 +1,20 @@
 .nav {
   position: fixed;
-  top: 70px;
+  top: 64px;
   right: -100%;
-  width: 220px;
-  height: calc(100vh - 70px);
-  background: rgba(25, 0, 25, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  width: min(72vw, 300px);
+  height: calc(100vh - 64px);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.2), transparent 34%),
+    linear-gradient(145deg, rgba(4, 16, 42, 0.96), rgba(2, 8, 26, 0.98));
+  border-left: 1px solid rgba(125, 220, 255, 0.18);
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 16px;
+  padding: 32px 24px;
+  gap: 18px;
   transition: right 0.3s ease;
   z-index: 60;
 }
@@ -21,9 +25,9 @@
 
 .nav a {
   text-decoration: none;
-  color: #fbe4d8;
-  font-size: 14px;
-  padding: 8px 14px;
+  color: #eaf7ff;
+  font-size: 17px;
+  padding: 12px 14px;
   border-radius: 10px;
   opacity: 0;
   transform: translateX(20px);
@@ -66,20 +70,14 @@
   color: white;
 }
 
-.active {
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 0 10px rgba(223, 182, 178, 0.5),
-    0 0 20px rgba(133, 79, 108, 0.35);
-  color: white;
-}
-
 @media (min-width: 768px) {
   .nav {
     position: static;
     height: auto;
     width: auto;
     background: none;
+    border-left: 0;
+    box-shadow: none;
     flex-direction: row;
     padding: 0;
     right: auto;

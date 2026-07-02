@@ -20,6 +20,21 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
     const handleScroll = () => {
       let current = "home";
       sections.forEach((sectionId) => {

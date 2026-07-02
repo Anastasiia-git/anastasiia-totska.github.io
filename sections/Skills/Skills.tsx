@@ -33,7 +33,8 @@ export default function Skills() {
       >
         {line2Items.map((item, i) => (
           <div key={`line2-${i}`} className={styles.skillBox}>
-            {item}
+            <i className={`${item.icon} ${styles.skillIcon}`} aria-hidden />
+            <span>{item.name}</span>
           </div>
         ))}
       </Marquee>

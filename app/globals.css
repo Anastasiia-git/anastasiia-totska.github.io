@@ -28,6 +28,10 @@ body {
   background-size: cover;
 }
 
+section {
+  scroll-margin-top: 70px;
+}
+
 body::before {
   content: "";
 

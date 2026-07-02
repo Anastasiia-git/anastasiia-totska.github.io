@@ -13,8 +13,9 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null,
   );
-  const featuredProject = projects.find((project) => project.featured);
-  const regularProjects = projects.filter((project) => !project.featured);
+  const orderedProjects = [...projects].sort((a, b) =>
+    Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
+  );
 
   return (
     <section className={styles.projects} id="projects">
@@ -28,19 +29,14 @@ export default function Projects() {
           </p>
         </div>
 
-        {featuredProject && (
-          <div className={styles.featuredProject}>
-            <ProjectCard
-              project={featuredProject}
-              featured
-              onClick={() => setSelectedProject(featuredProject)}
-            />
-          </div>
-        )}
-
         <div className={styles.grid}>
-          {regularProjects.map((project, index) => (
-            <Tilt key={project.id} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+          {orderedProjects.map((project, index) => (
+            <Tilt
+              key={project.id}
+              className={project.featured ? styles.featuredProject : ""}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+            >
               <motion.div
                 whileHover={{ y: -8 }}
                 initial={{ opacity: 0, y: 40 }}
@@ -50,6 +46,7 @@ export default function Projects() {
               >
                 <ProjectCard
                   project={project}
+                  featured={project.featured}
                   onClick={() => setSelectedProject(project)}
                 />
               </motion.div>
