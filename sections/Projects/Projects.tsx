@@ -21,8 +21,8 @@ export default function Projects() {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.container}>
+        <span className={styles.subtitle}>PROJECTS</span>
         <div className={styles.heading}>
-          <span>PROJECTS</span>
           <h2>My Projects</h2>
           <p>
             Selected work with practical frontend decisions: API flows, typed

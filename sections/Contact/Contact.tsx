@@ -32,8 +32,8 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
+        <p className={styles.subtitle}>CONTACT</p>
         <div className={styles.header}>
-          <p className={styles.subtitle}>CONTACT</p>
           <h2 className={styles.title}>Get in touch</h2>
         </div>
 

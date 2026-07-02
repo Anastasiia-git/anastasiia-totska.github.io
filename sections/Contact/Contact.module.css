@@ -21,8 +21,13 @@
 }
 
 .subtitle {
-  letter-spacing: 3px;
-  color: #4f9cff;
+  margin: 0 0 18px;
+  color: #5c95ff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .title {

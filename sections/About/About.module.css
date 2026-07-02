@@ -75,6 +75,7 @@
 .factItem {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   min-height: 82px;
   padding: 16px;
@@ -94,6 +95,9 @@
 
 .factItem span {
   display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 6px;
   color: #6fa0ff;
   font-size: 12px;
@@ -118,7 +122,11 @@
   border: 1px solid rgba(75, 136, 255, 0.34);
   border-radius: 20px;
   background:
-    radial-gradient(circle at 86% 0%, rgba(75, 136, 255, 0.26), transparent 36%),
+    radial-gradient(
+      circle at 86% 0%,
+      rgba(75, 136, 255, 0.26),
+      transparent 36%
+    ),
     linear-gradient(145deg, rgba(5, 24, 64, 0.92), rgba(3, 10, 28, 0.96));
   box-shadow:
     0 20px 54px rgba(0, 0, 0, 0.32),
@@ -342,6 +350,19 @@
 
   .facts {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .factItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .factItem span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .skillsCard,
