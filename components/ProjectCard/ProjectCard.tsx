@@ -9,9 +9,17 @@ type Props = {
   project: ProjectType;
   onClick: () => void;
   featured?: boolean;
+  featuredLabel: string;
+  openDetailsLabel: string;
 };
 
-export default function ProjectCard({ project, onClick, featured = false }: Props) {
+export default function ProjectCard({
+  project,
+  onClick,
+  featured = false,
+  featuredLabel,
+  openDetailsLabel,
+}: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
@@ -32,7 +40,7 @@ export default function ProjectCard({ project, onClick, featured = false }: Prop
       onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      aria-label={`Open details for ${project.title}`}
+      aria-label={`${openDetailsLabel} ${project.title}`}
     >
       <div className={styles.media}>
         <Image
@@ -47,7 +55,7 @@ export default function ProjectCard({ project, onClick, featured = false }: Prop
       </div>
 
       <div className={styles.cardContent}>
-        {featured && <span className={styles.badge}>Featured project</span>}
+        {featured && <span className={styles.badge}>{featuredLabel}</span>}
         <h3>{project.title}</h3>
         <p>{project.description}</p>
         <div className={styles.highlights}>

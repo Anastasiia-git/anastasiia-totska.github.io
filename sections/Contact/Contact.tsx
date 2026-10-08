@@ -1,40 +1,24 @@
+"use client";
+
 import styles from "./Contact.module.css";
 import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
-
-const contacts = [
-  {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:nastya.totskaya1997@gmail.com",
-    ariaLabel: "Send email to nastya.totskaya1997@gmail.com",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/",
-    ariaLabel: "Open LinkedIn",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/Anastasiia-git",
-    ariaLabel: "Open GitHub",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    href: "https://wa.me/491627686705?text=Hello%20Anastasiia",
-    ariaLabel: "Open WhatsApp",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
+  const contacts = [
+    { icon: Mail, label: "Email", href: "mailto:anastasiia.totska011@gmail.com", ariaLabel: t.contact.email },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/", ariaLabel: t.contact.linkedin },
+    { icon: Github, label: "GitHub", href: "https://github.com/Anastasiia-git", ariaLabel: t.contact.github },
+    { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/491627686705?text=Hello%20Anastasiia", ariaLabel: t.contact.whatsapp },
+  ];
+
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
-        <p className={styles.subtitle}>CONTACT</p>
+        <p className={styles.subtitle}>{t.contact.eyebrow}</p>
         <div className={styles.header}>
-          <h2 className={styles.title}>Get in touch</h2>
+          <h2 className={styles.title}>{t.contact.title}</h2>
         </div>
 
         <div className={styles.grid}>

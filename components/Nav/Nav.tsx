@@ -1,13 +1,7 @@
 "use client";
 
 import styles from "./Nav.module.css";
-
-const links = [
-  { id: "home", title: "Home" },
-  { id: "about", title: "About" },
-  { id: "projects", title: "Projects" },
-  { id: "contact", title: "Contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const menuCloseDelay = 80;
 
@@ -18,6 +12,13 @@ interface NavProps {
 }
 
 export default function Nav({ open, setOpen, activeSection }: NavProps) {
+  const { t } = useLanguage();
+  const links = [
+    { id: "home", title: t.nav.home },
+    { id: "about", title: t.nav.about },
+    { id: "projects", title: t.nav.projects },
+    { id: "contact", title: t.nav.contact },
+  ];
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
 

@@ -2,11 +2,15 @@
 
 import dynamic from "next/dynamic";
 import styles from "./Skills.module.css";
-import { line1Items, line2Items } from "../../data/skillsData";
+import { line2Items } from "../../data/skillsData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
 
 export default function Skills() {
+  const { t } = useLanguage();
+  const line1Items = [...t.hero.skills, ...t.hero.skills];
+
   return (
     <section className={styles.skillsContainer}>
       <Marquee

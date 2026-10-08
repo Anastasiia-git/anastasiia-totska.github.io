@@ -6,10 +6,13 @@ import { Squash as Hamburger } from "hamburger-react";
 import styles from "./Header.module.css";
 import Nav from "../../components/Nav/Nav";
 import { useBodyScrollLock } from "../../components/useBodyScrollLock";
+import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const sections = ["home", "about", "projects", "contact"];
 
 export default function Header() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -51,7 +54,7 @@ export default function Header() {
         type="button"
         className={styles.logo}
         onClick={scrollToTop}
-        aria-label="Scroll to top"
+        aria-label={t.header.scrollToTop}
       >
         <Image src="/favicon.webp" alt="AT logo" width={36} height={36} />
         <span className={styles.logoText}>
@@ -75,8 +78,16 @@ export default function Header() {
 
       <Nav open={open} setOpen={setOpen} activeSection={activeSection} />
 
-      <div className={styles.burger}>
-        <Hamburger toggled={open} toggle={setOpen} size={22} />
+      <div className={styles.actions}>
+        <LanguageSwitcher />
+        <div className={styles.burger}>
+          <Hamburger
+            toggled={open}
+            toggle={setOpen}
+            size={18}
+            label={open ? t.header.closeMenu : t.header.openMenu}
+          />
+        </div>
       </div>
 
       {open && (

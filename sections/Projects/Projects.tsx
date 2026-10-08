@@ -4,30 +4,32 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { ProjectType } from "@/types/projectType";
-import { projects } from "@/data/projectsData";
+import { projectsData } from "@/data/projectsData";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import ProjectModal from "@/components/ProjectModal/ProjectModal";
 import styles from "./Projects.module.css";
-
-const orderedProjects = [...projects].sort(
-  (a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
-);
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Projects() {
+  const { t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null,
+  );
+  const projects = projectsData.map((project, index) => ({
+    ...project,
+    ...t.projects.items[index],
+  }));
+  const orderedProjects = [...projects].sort(
+    (a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)),
   );
 
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.container}>
-        <span className={styles.subtitle}>PROJECTS</span>
+        <span className={styles.subtitle}>{t.projects.eyebrow}</span>
         <div className={styles.heading}>
-          <h2>My Projects</h2>
-          <p>
-            Selected work with practical frontend decisions: API flows, typed
-            data, state management, accessibility, and deployed UI.
-          </p>
+          <h2>{t.projects.title}</h2>
+          <p>{t.projects.description}</p>
         </div>
 
         <div className={styles.grid}>
@@ -48,6 +50,8 @@ export default function Projects() {
                 <ProjectCard
                   project={project}
                   featured={project.featured}
+                  featuredLabel={t.projects.featured}
+                  openDetailsLabel={t.projects.openDetails}
                   onClick={() => setSelectedProject(project)}
                 />
               </motion.div>
@@ -59,6 +63,7 @@ export default function Projects() {
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
+        labels={t.projects.modal}
       />
     </section>
   );

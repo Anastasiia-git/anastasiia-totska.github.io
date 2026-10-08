@@ -65,7 +65,7 @@
   color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav {
     position: static;
     height: auto;
@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .nav a {
     font-size: 16px;
     padding: 10px 22px;

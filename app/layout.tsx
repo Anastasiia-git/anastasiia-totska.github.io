@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import CursorLight from "@/components/CursorLight/CursorLight";
 import ScrollBackground from "@/components/ScrollBackground/ScrollBackground";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -58,8 +59,11 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <ScrollBackground />
-        <CursorLight /> {children}
+        <LanguageProvider>
+          <ScrollBackground />
+          <CursorLight />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

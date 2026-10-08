@@ -10,9 +10,17 @@ import { useBodyScrollLock } from "@/components/useBodyScrollLock";
 interface Props {
   project: ProjectType | null;
   onClose: () => void;
+  labels: {
+    role: string;
+    problem: string;
+    solution: string;
+    result: string;
+    liveDemo: string;
+    close: string;
+  };
 }
 
-export default function ProjectModal({ project, onClose }: Props) {
+export default function ProjectModal({ project, onClose, labels }: Props) {
   useBodyScrollLock(Boolean(project));
 
   useEffect(() => {
@@ -65,19 +73,19 @@ export default function ProjectModal({ project, onClose }: Props) {
 
             <div className={styles.caseDetails}>
               <div>
-                <h4>My role</h4>
+                <h4>{labels.role}</h4>
                 <p>{project.role}</p>
               </div>
               <div>
-                <h4>Problem</h4>
+                <h4>{labels.problem}</h4>
                 <p>{project.problem}</p>
               </div>
               <div>
-                <h4>Solution</h4>
+                <h4>{labels.solution}</h4>
                 <p>{project.solution}</p>
               </div>
               <div>
-                <h4>Result</h4>
+                <h4>{labels.result}</h4>
                 <p>{project.result}</p>
               </div>
             </div>
@@ -93,7 +101,7 @@ export default function ProjectModal({ project, onClose }: Props) {
             <div className={styles.links}>
               {project.live && (
                 <a href={project.live} target="_blank" rel="noopener noreferrer">
-                  Live Demo
+                  {labels.liveDemo}
                 </a>
               )}
               {project.github && (
@@ -110,7 +118,7 @@ export default function ProjectModal({ project, onClose }: Props) {
             <button
               className={styles.close}
               onClick={onClose}
-              aria-label="Close project details"
+              aria-label={labels.close}
             >
               ×
             </button>

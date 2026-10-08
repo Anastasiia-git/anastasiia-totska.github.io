@@ -12,25 +12,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import styles from "./About.module.css";
-import { abilityItems } from "@/data/profileData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const facts = [
-  {
-    icon: Layers,
-    label: "Main stack",
-    value: "React · Next.js · TypeScript",
-  },
-  {
-    icon: Target,
-    label: "Focus",
-    value: "Responsive frontend",
-  },
-  {
-    icon: GraduationCap,
-    label: "Training",
-    value: "872h full-stack course",
-  },
-];
+const factIcons = [Layers, Target, GraduationCap];
 
 const layoutVariants: Variants = {
   hidden: { opacity: 0, y: 34 },
@@ -65,6 +49,8 @@ const factVariants: Variants = {
 };
 
 export default function About() {
+  const { language, t, cvHref } = useLanguage();
+
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
@@ -76,24 +62,25 @@ export default function About() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div className={styles.main} variants={sectionItemVariants}>
-            <p className={styles.subtitle}>ABOUT ME</p>
+            <p className={styles.subtitle}>{t.about.eyebrow}</p>
 
             <h2 className={styles.title}>
-              Frontend developer focused on clean React interfaces
+              {t.about.title}
             </h2>
 
             <p className={styles.role}>
-              <strong>Anastasiia Totska</strong> · Junior Frontend Developer
+              <strong>Anastasiia Totska</strong> · {t.about.role}
             </p>
 
             <p className={styles.lead}>
-              I care about interfaces that feel clear to use and simple to
-              maintain: typed components, thoughtful states, API integration,
-              and production-ready delivery.
+              {t.about.lead}
             </p>
 
             <motion.div className={styles.facts} variants={sectionItemVariants}>
-              {facts.map(({ icon: Icon, label, value }) => (
+              {t.about.facts.map(({ label, value }, index) => {
+                const Icon = factIcons[index];
+
+                return (
                 <motion.div
                   className={styles.factItem}
                   key={label}
@@ -105,7 +92,8 @@ export default function About() {
                     <strong>{value}</strong>
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </motion.div>
           </motion.div>
 
@@ -118,19 +106,19 @@ export default function About() {
             <div className={styles.certificateText}>
               <p className={styles.certificateLabel}>
                 <ShieldCheck aria-hidden="true" size={20} strokeWidth={1.8} />
-                Certification
+                {t.about.certification}
               </p>
 
-              <h3>Fullstack Developer Course</h3>
+              <h3>{t.about.certificateTitle}</h3>
 
-              <p>GoIT · May 2026 · 872 hours</p>
-              <p>HTML/CSS · JavaScript · React · Next.js · Node.js</p>
+              <p>{t.about.certificateMeta}</p>
+              <p>{t.about.certificateStack}</p>
             </div>
 
             <div className={styles.certificateImage}>
               <Image
                 src="/certificate.webp"
-                alt="GoIT Fullstack Developer Course certificate"
+                alt={t.about.certificateAlt}
                 fill
                 sizes="(max-width: 767px) 100vw, 420px"
               />
@@ -140,11 +128,11 @@ export default function About() {
           <motion.div className={styles.skillsCard} variants={sectionItemVariants}>
             <div className={styles.sectionTitle}>
               <Puzzle aria-hidden="true" size={28} strokeWidth={1.8} />
-              <h3>Practical skills</h3>
+              <h3>{t.about.practicalSkills}</h3>
             </div>
 
             <div className={styles.abilityList}>
-              {abilityItems.map((item) => (
+              {t.about.abilities.map((item) => (
                 <span key={item}>
                   <CheckCircle2 aria-hidden="true" size={18} strokeWidth={2} />
                   {item}
@@ -159,31 +147,19 @@ export default function About() {
             </div>
 
             <div className={styles.goalText}>
-              <h3>Current goal</h3>
-              <p className={styles.text}>
-                I am looking for a junior frontend role where I can contribute
-                to product features, improve with code review, and grow inside
-                an experienced engineering team.
-              </p>
+              <h3>{t.about.goalTitle}</h3>
+              <p className={styles.text}>{t.about.goal}</p>
             </div>
 
             <div className={styles.btnBox}>
               <a
-                href="/cv/CV_Anastasiia_Totska_de.pdf"
+                href={cvHref}
                 download
                 className={styles.button}
+                aria-label={`${t.about.downloadCv} ${language.toUpperCase()}`}
               >
                 <FileText aria-hidden="true" size={22} strokeWidth={1.8} />
-                Download CV DE
-              </a>
-
-              <a
-                href="/cv/CV_Anastasiia_Totska_en.pdf"
-                download
-                className={styles.buttonSecondary}
-              >
-                <FileText aria-hidden="true" size={22} strokeWidth={1.8} />
-                Download CV EN
+                {t.about.downloadCv} · {language.toUpperCase()}
               </a>
             </div>
           </motion.div>

@@ -1,23 +1,3 @@
-export const line1Items = [
-  "Junior Frontend Developer",
-  "Frontend Development",
-  "Web Applications",
-  "Responsive Design",
-  "Clean Code",
-  "UI Implementation",
-  "Modern Interfaces",
-  "Full-Stack Fundamentals",
-
-  "Junior Frontend Developer",
-  "Frontend Development",
-  "Web Applications",
-  "Responsive Design",
-  "Clean Code",
-  "UI Implementation",
-  "Modern Interfaces",
-  "Full-Stack Fundamentals",
-];
-
 export type SkillItem = {
   name: string;
   icon?: string;
