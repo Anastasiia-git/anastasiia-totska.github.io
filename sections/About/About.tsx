@@ -4,8 +4,9 @@ import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import {
   Layers,
+  Code2,
+  GitBranch,
   Target,
-  GraduationCap,
   Puzzle,
   CheckCircle2,
   FileText,
@@ -14,7 +15,7 @@ import {
 import styles from "./About.module.css";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const factIcons = [Layers, Target, GraduationCap];
+const factIcons = [Layers, Code2, GitBranch];
 
 const layoutVariants: Variants = {
   hidden: { opacity: 0, y: 34 },
@@ -39,15 +40,6 @@ const sectionItemVariants: Variants = {
   },
 };
 
-const factVariants: Variants = {
-  hidden: { opacity: 0, y: 14 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.45, ease: "easeOut" },
-  },
-};
-
 export default function About() {
   const { language, t, cvHref } = useLanguage();
 
@@ -69,32 +61,28 @@ export default function About() {
             </h2>
 
             <p className={styles.role}>
-              <strong>Anastasiia Totska</strong> · {t.about.role}
+              <strong>{`${t.name.first} ${t.name.last}`}</strong> · {t.about.role}
             </p>
 
             <p className={styles.lead}>
               {t.about.lead}
             </p>
 
-            <motion.div className={styles.facts} variants={sectionItemVariants}>
+            <div className={styles.facts}>
               {t.about.facts.map(({ label, value }, index) => {
                 const Icon = factIcons[index];
 
                 return (
-                <motion.div
-                  className={styles.factItem}
-                  key={label}
-                  variants={factVariants}
-                >
-                  <Icon aria-hidden="true" size={34} strokeWidth={1.8} />
-                  <div>
-                    <span>{label}</span>
-                    <strong>{value}</strong>
+                  <div className={styles.factItem} key={label}>
+                    <Icon aria-hidden="true" size={34} strokeWidth={1.8} />
+                    <div>
+                      <span>{label}</span>
+                      <strong>{value}</strong>
+                    </div>
                   </div>
-                </motion.div>
                 );
               })}
-            </motion.div>
+            </div>
           </motion.div>
 
           <motion.aside

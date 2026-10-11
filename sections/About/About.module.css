@@ -1,6 +1,8 @@
 .about {
   scroll-margin-top: 82px;
-  padding: var(--section-padding-y) var(--section-padding-x);
+  margin-top: var(--section-gap);
+  margin-bottom: 0;
+  padding: 0 var(--section-padding-x);
 }
 
 .container {
@@ -74,6 +76,7 @@
 
 .factItem {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
@@ -83,6 +86,14 @@
   border-radius: 14px;
   background: rgba(3, 17, 47, 0.68);
   box-shadow: inset 0 0 22px rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.factItem > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .factItem svg,
@@ -94,10 +105,9 @@
 }
 
 .factItem span {
-  display: block;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 6px;
   color: #6fa0ff;
   font-size: 12px;
@@ -109,6 +119,7 @@
 
 .factItem strong {
   display: block;
+  width: 100%;
   color: #ffffff;
   font-size: 15px;
   font-weight: 700;
@@ -333,7 +344,7 @@
   outline-offset: 4px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
     gap: 28px;
@@ -352,19 +363,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .factItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .factItem span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .skillsCard,
   .goalCard {
     grid-column: 1 / -1;
@@ -380,11 +378,10 @@
 
   .btnBox {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(380px, 470px);
     gap: 42px 44px;
@@ -405,7 +402,7 @@
   }
 
   .goalCard {
-    grid-template-columns: 80px minmax(0, 1fr) minmax(300px, 470px);
+    grid-template-columns: 80px minmax(0, 1fr) max-content;
   }
 
   .goalIcon {
@@ -415,5 +412,7 @@
 
   .btnBox {
     grid-column: auto;
+    grid-template-columns: max-content;
+    justify-self: start;
   }
 }

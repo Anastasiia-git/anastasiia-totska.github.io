@@ -16,8 +16,8 @@ export default function Hero() {
         <div className={styles.left}>
           <p className={styles.intro}>{t.hero.intro}</p>
           <h1 className={styles.title}>
-            <span>Anastasiia</span>
-            <span>Totska</span>
+            <span>{t.name.first}</span>
+            <span>{t.name.last}</span>
           </h1>
           <h2 className={styles.role}>{t.hero.role}</h2>
           <p className={styles.description}>{t.hero.description}</p>
@@ -26,7 +26,7 @@ export default function Hero() {
         <div className={styles.portraitWrap}>
           <Image
             src="/avatar1.webp"
-            alt={t.hero.portraitAlt}
+            alt={`${t.name.first} ${t.name.last}`}
             fill
             priority
             sizes="(max-width: 767px) 72vw, (max-width: 1023px) 320px, 380px"

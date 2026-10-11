@@ -7,7 +7,7 @@
   --scroll-glow-a: 80 140 255;
   --scroll-glow-b: 180 80 255;
   --section-padding-x: 16px;
-  --section-padding-y: 54px;
+  --section-gap: 54px;
 }
 
 html,
@@ -54,14 +54,14 @@ section {
 @media (min-width: 768px) {
   :root {
     --section-padding-x: 24px;
-    --section-padding-y: 64px;
+    --section-gap: 64px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
     --section-padding-x: 32px;
-    --section-padding-y: 76px;
+    --section-gap: 76px;
   }
 }
 

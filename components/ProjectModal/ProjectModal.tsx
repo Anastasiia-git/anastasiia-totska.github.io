@@ -57,46 +57,48 @@ export default function ProjectModal({ project, onClose, labels }: Props) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
           >
-            <div className={styles.imageWrapper}>
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className={styles.modalImage}
-                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 500px"
-                priority
-              />
+            <div className={styles.content}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className={styles.modalImage}
+                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 60vw, 500px"
+                  priority
+                />
+              </div>
+
+              <h3 id="project-modal-title">{project.title}</h3>
+              <p>{project.description}</p>
+
+              <div className={styles.caseDetails}>
+                <div>
+                  <h4>{labels.role}</h4>
+                  <p>{project.role}</p>
+                </div>
+                <div>
+                  <h4>{labels.problem}</h4>
+                  <p>{project.problem}</p>
+                </div>
+                <div>
+                  <h4>{labels.solution}</h4>
+                  <p>{project.solution}</p>
+                </div>
+                <div>
+                  <h4>{labels.result}</h4>
+                  <p>{project.result}</p>
+                </div>
+              </div>
+
+              {Boolean(project.tech?.length) && (
+                <div className={styles.tech}>
+                  {project.tech?.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+              )}
             </div>
-
-            <h3 id="project-modal-title">{project.title}</h3>
-            <p>{project.description}</p>
-
-            <div className={styles.caseDetails}>
-              <div>
-                <h4>{labels.role}</h4>
-                <p>{project.role}</p>
-              </div>
-              <div>
-                <h4>{labels.problem}</h4>
-                <p>{project.problem}</p>
-              </div>
-              <div>
-                <h4>{labels.solution}</h4>
-                <p>{project.solution}</p>
-              </div>
-              <div>
-                <h4>{labels.result}</h4>
-                <p>{project.result}</p>
-              </div>
-            </div>
-
-            {Boolean(project.tech?.length) && (
-              <div className={styles.tech}>
-                {project.tech?.map((tech) => (
-                  <span key={tech}>{tech}</span>
-                ))}
-              </div>
-            )}
 
             <div className={styles.links}>
               {project.live && (
