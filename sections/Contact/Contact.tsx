@@ -8,7 +8,7 @@ export default function Contact() {
   const { t } = useLanguage();
   const contacts = [
     { icon: Mail, label: "Email", href: "mailto:anastasiia.totska011@gmail.com", ariaLabel: t.contact.email },
-    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/anastasiia-totska-53a76b3a8/", ariaLabel: t.contact.linkedin },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/anastasiia-totska", ariaLabel: t.contact.linkedin },
     { icon: Github, label: "GitHub", href: "https://github.com/Anastasiia-git", ariaLabel: t.contact.github },
     { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/491627686705?text=Hello%20Anastasiia", ariaLabel: t.contact.whatsapp },
   ];
