@@ -14,17 +14,17 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anastasiia-totska-github-io.vercel.app/"),
-  title: "Anastasiia Totska | Junior Frontend Developer",
+  title: "Anastasiia Totska | React Developer",
   description:
-    "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
+    "Portfolio of Anastasiia Totska, a React developer building accessible React and Next.js interfaces with TypeScript.",
   authors: [{ name: "Anastasiia Totska" }],
   icons: {
     icon: "/favicon.webp",
   },
   openGraph: {
-    title: "Anastasiia Totska | Junior Frontend Developer",
+    title: "Anastasiia Totska | React Developer",
     description:
-      "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
+      "Portfolio of Anastasiia Totska, a React developer building accessible React and Next.js interfaces with TypeScript.",
     url: "https://anastasiia-totska-github-io.vercel.app/",
     siteName: "Anastasiia Totska Portfolio",
     images: [
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anastasiia Totska | Junior Frontend Developer",
+    title: "Anastasiia Totska | React Developer",
     description:
-      "Portfolio of Anastasiia Totska, a junior frontend developer building accessible React and Next.js interfaces with TypeScript.",
+      "Portfolio of Anastasiia Totska, a React developer building accessible React and Next.js interfaces with TypeScript.",
     images: ["/favicon.webp"],
   },
 };

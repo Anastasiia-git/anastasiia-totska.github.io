@@ -1,6 +1,6 @@
 # Anastasiia Totska Portfolio
 
-Personal portfolio for a junior frontend developer. The site presents my profile, practical skills, selected projects, downloadable CVs, and contact links in one responsive page.
+Personal portfolio for a React developer. The site presents my profile, practical skills, selected projects, downloadable CVs, and contact links in one responsive page.
 
 ## Live Demo
 
