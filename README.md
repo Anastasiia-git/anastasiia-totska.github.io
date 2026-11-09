@@ -10,15 +10,15 @@ Personal portfolio for a React developer. The site presents my profile, practica
 
 ### Hero Section
 
-![Portfolio home](screenshots/home.png)
+![Portfolio home](screenshots/home.webp)
 
 ### About Section
 
-![Portfolio about](screenshots/about.png)
+![Portfolio about](screenshots/about.webp)
 
 ### Projects Section
 
-![Portfolio projects](screenshots/projects.png)
+![Portfolio projects](screenshots/projects.webp)
 
 ## Stack
 
